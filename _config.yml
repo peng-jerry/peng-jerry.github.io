@@ -4,11 +4,10 @@ theme: minima
 
 email: jp2011pa@gmail.com
 github_username: peng-jerry
-social_links:
-  linkedin_username: 
-    - title: LinkedIn Profile
-      icon: linkedin
-      url: "https://www.linkedin.com/in/jerry-peng-706711231"
+   social_links:
+     - title: Minima Theme repository at GitHub
+       icon: github
+       url: "https://github.com/jekyll/minima"
 
 header_pages:
   - resume.md
