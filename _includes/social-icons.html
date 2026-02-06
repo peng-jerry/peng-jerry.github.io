@@ -1,0 +1,9 @@
+<div class="social-icons">
+  {% for network, username in site.social %}
+    {% if network == "email" %}
+      <a href="mailto:{{ username }}">{{ network | capitalize }}</a>
+    {% else %}
+      <a href="https://{{ network }}.com/{{ username }}">{{ network | capitalize }}</a>
+    {% endif %}
+  {% endfor %}
+</div>
