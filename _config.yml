@@ -7,7 +7,7 @@ github_username: peng-jerry
 linkedin: 
   - title: Minima Theme repository at GitHub
   - icon: LinkedIn
-#       url: "https://linkedin.com/in/jerry-peng-706711231"
+  - url: "https://linkedin.com/in/jerry-peng-706711231"
 
 header_pages:
   - resume.md
