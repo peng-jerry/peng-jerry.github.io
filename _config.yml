@@ -1,3 +1,11 @@
-theme: jekyll-theme-minimal
-title: Jerry Peng
+title: Your Name
 description: Mechanical Engineering Portfolio
+theme: minima
+
+email: your@email.com
+github_username: yourusername
+linkedin_username: your-linkedin
+
+header_pages:
+  - projects.md
+  - about.md
