@@ -6,8 +6,8 @@ email: jp2011pa@gmail.com
 github_username: peng-jerry
 linkedin: 
   - title: Minima Theme repository at GitHub
-  - icon: LinkedIn
-  - url: "https://linkedin.com/in/jerry-peng-706711231"
+    icon: LinkedIn
+    url: "https://linkedin.com/in/jerry-peng-706711231"
 
 header_pages:
   - resume.md
