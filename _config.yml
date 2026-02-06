@@ -4,7 +4,7 @@ theme: minima
 
 email: jp2011pa@gmail.com
 github_username: peng_jerry
-linkedin_username: https://www.linkedin.com/in/jerry-peng-706711231
+linkedin_username: <a href="https://www.linkedin.com/in/jerry-peng-706711231">LinkedIn</a>
 
 header_pages:
   - resume.md
