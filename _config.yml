@@ -7,6 +7,6 @@ github_username: peng_jerry
 linkedin_username: https://www.linkedin.com/in/jerry-peng-706711231
 
 header_pages:
+  - resume.md
   - projects.md
   - about.md
-  - resume.md
