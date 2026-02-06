@@ -1,10 +1,10 @@
-title: Your Name
+title: Jerry Peng
 description: Mechanical Engineering Portfolio
 theme: minima
 
-email: your@email.com
-github_username: yourusername
-linkedin_username: your-linkedin
+email: jp2011pa@gmail.com
+github_username: peng_jerry
+linkedin_username: https://www.linkedin.com/in/jerry-peng-706711231
 
 header_pages:
   - projects.md
