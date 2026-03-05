@@ -6,7 +6,6 @@ baseurl: ""
 theme: minima
 
 email: jp2011pa@gmail.com
-author: Jerry Peng
 
 minima:
   social_links:
