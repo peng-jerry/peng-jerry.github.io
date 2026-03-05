@@ -5,13 +5,13 @@ baseurl: ""
 
 theme: minima
 
-author: Jerry Peng
 email: jp2011pa@gmail.com
+github: peng-jerry
+linkedin: yourlinkedin
 
-minima:
-  social_links:
-    github: peng-jerry
-    linkedin: yourlinkedin
+social_links:
+  github: peng-jerry
+    
 
 header_pages:
   - about.md
