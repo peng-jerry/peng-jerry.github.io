@@ -1,13 +1,20 @@
-title: Jerry Peng
-description: Portfolio
+title: Your Name
+description: Personal portfolio and blog
+url: "https://yourusername.github.io"
+baseurl: ""
+
 theme: minima
 
+author:
+  name: Your Name
+  email: your@email.com
 
-email: jp2011pa@gmail.com
-github: peng-jerry
-linkedin: jerry-peng-706711231
+minima:
+  social_links:
+    github: yourusername
+    linkedin: yourlinkedin
 
 header_pages:
-  - resume.md
-  - projects.md
   - about.md
+  - projects.md
+  - blog.md
