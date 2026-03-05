@@ -2,10 +2,10 @@ title: Jerry Peng
 description: Portfolio
 theme: minima
 
-social:
-  email: jp2011pa@gmail.com
-  github: peng-jerry
-  linkedin: jerry-peng-706711231
+
+email: jp2011pa@gmail.com
+github: peng-jerry
+linkedin: jerry-peng-706711231
 
 header_pages:
   - resume.md
