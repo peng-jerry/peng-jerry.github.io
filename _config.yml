@@ -1,17 +1,17 @@
-title: Your Name
-description: Personal portfolio and blog
-url: "https://yourusername.github.io"
+title: Jerry Peng
+description: portfolio
+url: "https://peng-jerry.github.io/"
 baseurl: ""
 
 theme: minima
 
 author:
-  name: Your Name
-  email: your@email.com
+  name: Jerry Peng
+  email: jp2011pa@gmail.com
 
 minima:
   social_links:
-    github: yourusername
+    github: peng-jerry
     linkedin: yourlinkedin
 
 header_pages:
