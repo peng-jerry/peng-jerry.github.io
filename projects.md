@@ -3,18 +3,20 @@ layout: page
 title: Projects
 ---
 
-## Capstone Design Project
-**Tools:** SolidWorks, ANSYS, MATLAB  
+<div class="projects-grid">
 
-- Designed and analyzed a mechanical system
-- Performed FEA to validate stress and deformation
-- Produced manufacturing-ready drawings
+{% for project in site.projects %}
 
-![CAD Model](cad.png)
+<a class="project-card" href="{{ project.url | relative_url }}">
+  <div class="project-image">
+    <img src="{{ project.image }}" alt="{{ project.title }}">
+  </div>
 
----
+  <div class="project-overlay">
+    <h3>{{ project.title }}</h3>
+  </div>
+</a>
 
-## Mechanical Design Project
-**Tools:** SolidWorks  
+{% endfor %}
 
-Short description of the problem, your role, and the result.
+</div>
