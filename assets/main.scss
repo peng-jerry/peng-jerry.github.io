@@ -3,3 +3,12 @@
 ---
 
 @import "minima";
+
+.footer-col-wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1;
+}
