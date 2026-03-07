@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Resume
+title: CV
 ---
 
-📄 **Download PDF:** [Resume](resume.pdf)
+[PDF Resume](resume.pdf)
 
 ---
 
