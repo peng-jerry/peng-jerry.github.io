@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+classes: wide
 ---
 
 <div class="projects-grid">
