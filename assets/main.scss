@@ -13,24 +13,30 @@
   flex: 1;
 }
 
-.page-projects .wrapper {
-  max-width: 1400px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+.page-projects {
+  /* Allow wrapper to be full width */
+  .wrapper {
+    max-width: 1400px; /* wide enough for 3 columns */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-.page-projects .page-content {
-  max-width: 100%;
-  width: 100%;
-}
+  /* Allow content to fill wrapper */
+  .page-content,
+  .post {
+    max-width: 100%;
+    width: 100%;
+    padding: 0; /* remove default post padding */
+  }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  width: 100%;
-  margin: 30px auto;
-}
+  /* Projects grid styling */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* force 3 columns on desktop */
+    gap: 30px;
+    width: 100%;
+    margin: 30px auto;
+  }
 
 /* Project card */
 .project-card {
