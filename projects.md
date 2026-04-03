@@ -5,7 +5,7 @@ title: Projects
 
 <div class="projects-grid">
 
-  <a href="/project1/" class="project-card">
+  <a href="projects/project1/" class="project-card">
     <div class="project-image">
       <img src="/assets/project1.jpg" alt="Project 1">
     </div>
@@ -14,7 +14,7 @@ title: Projects
     </div>
   </a>
 
-  <a href="/project2/" class="project-card">
+  <a href="projects/project2/" class="project-card">
     <div class="project-image">
       <img src="/assets/project2.jpg" alt="Project 2">
     </div>
