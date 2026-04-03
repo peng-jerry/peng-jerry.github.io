@@ -13,15 +13,8 @@
   flex: 1;
 }
 
-.page-projects .wrapper {
-  max-width: none;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.page-projects .page-content {
-  max-width: 100%;
-  width: 100%;
+.wide .wrapper {
+  max-width: 1400px;
 }
 
 .projects-grid {
