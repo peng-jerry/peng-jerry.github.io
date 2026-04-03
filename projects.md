@@ -23,4 +23,13 @@ title: Projects
     </div>
   </a>
 
+  <a href="/project3/" class="project-card">
+    <div class="project-image">
+      <img src="/assets/project3.jpg" alt="Project 3">
+    </div>
+    <div class="project-overlay">
+      <h3>Project 3</h3>
+    </div>
+  </a>
+  
 </div>
