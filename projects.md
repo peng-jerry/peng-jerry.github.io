@@ -32,5 +32,6 @@ title: Projects
         <h3>Project 3</h3>
       </div>
     </a>
+    
   </div>
 </div>
