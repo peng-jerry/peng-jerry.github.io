@@ -15,10 +15,10 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 30px;
-  max-width: 1500px;
-  margin: 30px auto; /* ✅ keeps top spacing + centers */
+  max-width: 1600px;
+  margin: 30px auto;
 }
 
 /* Project card */
