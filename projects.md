@@ -5,18 +5,22 @@ title: Projects
 
 <div class="projects-grid">
 
-{% for project in site.projects %}
+  <a href="/project1/" class="project-card">
+    <div class="project-image">
+      <img src="/assets/project1.jpg" alt="Project 1">
+    </div>
+    <div class="project-overlay">
+      <h3>Project 1</h3>
+    </div>
+  </a>
 
-<a class="project-card" href="{{ project.url | relative_url }}">
-  <div class="project-image">
-    <img src="{{ project.image }}" alt="{{ project.title }}">
-  </div>
-
-  <div class="project-overlay">
-    <h3>{{ project.title }}</h3>
-  </div>
-</a>
-
-{% endfor %}
+  <a href="/project2/" class="project-card">
+    <div class="project-image">
+      <img src="/assets/project2.jpg" alt="Project 2">
+    </div>
+    <div class="project-overlay">
+      <h3>Project 2</h3>
+    </div>
+  </a>
 
 </div>
