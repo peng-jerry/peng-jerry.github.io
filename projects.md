@@ -12,8 +12,7 @@ title: Projects
       </div>
       <div class="project-overlay">
         <h3>Optimized Rotary Design Project</h3>
-        <p class="project-subheading">ESTAT Actuation</p>
-        <p class="project-subheading">January - August 2024</p>
+        <p class="project-subheading">ESTAT Actuation (January - August 2024)</p>
       </div>
     </a>
   
