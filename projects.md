@@ -11,7 +11,8 @@ title: Projects
         <img src="/assets/project1.jpg" alt="Project 1">
       </div>
       <div class="project-overlay">
-        <h3>Project 1</h3>
+        <h3>Optimized Rotary Design Project</h3>
+        <p class="project-subheading">ESTAT Actuation</p>
       </div>
     </a>
   
