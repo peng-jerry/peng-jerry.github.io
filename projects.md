@@ -11,7 +11,7 @@ title: Projects
         <img src="/assets/project_cards/ORD.png" alt="Project 1">
       </div>
       <div class="project-overlay">
-        <h3>Optimized Rotary Design Project</h3>
+        <h3>Optimized Rotary Design</h3>
         <p class="project-subheading">ESTAT Actuation (January - August 2024)</p>
       </div>
     </a>
