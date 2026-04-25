@@ -8,7 +8,7 @@ title: Projects
 
     <a href="/project1/" class="project-card">
       <div class="project-image">
-        <img src="/assets/project1.jpg" alt="Project 1">
+        <img src="/assets/project_cards/ORD.png" alt="Project 1">
       </div>
       <div class="project-overlay">
         <h3>Optimized Rotary Design Project</h3>
