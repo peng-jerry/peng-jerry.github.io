@@ -44,7 +44,7 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-   transition: transform 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 /* Hover zoom */
@@ -58,22 +58,24 @@
 .project-overlay {
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
+
   width: 100%;
   padding: 15px;
-  background: rgba(0,0,0,0.4);
   box-sizing: border-box;
+
+  background: rgba(0,0,0,0.4);
   color: white;
   text-align: center;
-}
 
-.project-overlay {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .project-subheading {
   font-size: 0.9rem;
   opacity: 0.8;
-  margin: 2px 0 0 0;
+  margin: 0;
 }
