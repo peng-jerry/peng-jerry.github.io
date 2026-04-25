@@ -6,4 +6,4 @@ title: CV
 [PDF Resume](/assets/Resume-JerryPeng.pdf)
 
 ---
-![My image](/assets/images/my-image.png)
+![Resume](/assets/images/Resume-JerryPeng.png)
