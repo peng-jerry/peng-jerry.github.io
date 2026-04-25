@@ -61,13 +61,15 @@
   width: 100%;
   padding: 20px;
   background: rgba(0,0,0,0.4);
+  box-sizing: border-box;
   color: white;
   text-align: center;
 }
 
-.project-overlay h3 {
-  margin: 0;
-  font-size: 18px;
+.project-overlay {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .project-subheading {
