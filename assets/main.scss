@@ -22,7 +22,7 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 50px;
 }
 
 .projects-page .projects-grid {
@@ -71,10 +71,12 @@
 
   display: flex;
   flex-direction: column;
+  line-height: 0.9;
 }
 
 .project-subheading {
   font-size: 0.9rem;
   opacity: 0.8;
   margin: 0;
+  line-height: 0.9;
 }
