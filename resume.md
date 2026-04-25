@@ -3,7 +3,7 @@ layout: page
 title: CV
 ---
 
-[PDF Resume](resume.pdf)
+[PDF Resume](Resume-JerryPeng(2).pdf)
 
 ---
 
