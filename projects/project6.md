@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Project 6
+title: Autonomous Control for Unmanned Surface Vehicles (USVs)
 permalink: /project6/
 ---
