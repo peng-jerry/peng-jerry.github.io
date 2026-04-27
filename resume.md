@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CV
+title: Resume
 ---
 
 [PDF Resume](/assets/Resume-JerryPeng.pdf)
