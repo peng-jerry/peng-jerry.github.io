@@ -1,5 +1,6 @@
 ---
 layout: page
-title: Project 2
+title: Lightweight Electroadhesive Exo Tendon (LEET) System
 permalink: /project2/
 ---
+
