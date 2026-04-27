@@ -8,7 +8,7 @@ permalink: /project1/
 
 **January - August 2024**
 
-**Skills: CAD(Solidworks), Fabrication Techniques (Machining, Laser Cutting, Waterjet), FMEA, Quality Control, Project Management, Talking to Suppliers**
+**Skills: CAD(Solidworks), Fabrication Techniques (Machining, Laser Cutting, Waterjet), FMEA, Quality Control, Project Management, Engineering Documentation**
 
 ### Clutch Calculations
 As a part of my co-op at ESTAT Actuation, my primary project was called the Optimized Rotary Design project. ESTAT had a standard size that they were using for demos at the time, but many customers wanted custom sizes, which we had not developed a good pipeline to create effectively. 
