@@ -22,7 +22,7 @@ Through this pipeline I created over 20 new custom rotary designs, and decreased
 ### Automate 2024 and Suzuki 
 This process was first showcased as a part of the clutch catalog featured at the 2024 Automate Demo, where it was shared with many compaines in the robotics and automation industry. 
 
-![AutomateCC](/assets/project1/AutomateCC.jpg)
+<img src="/assets/project1/AutomateCC.jpg" alt="AutomateCC" width="300">
 
 As well, the culmination of the project was a clutch design used in the Suzuki Moqba, in an order over $100,000, which was the largest order to date for the company. 
 
