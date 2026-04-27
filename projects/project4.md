@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Project 4
+title: Development of a Core-Shell-Shell 3-D Printer for the Manufacturing of Dielectric Elastomers
 permalink: /project4/
 ---
