@@ -4,8 +4,9 @@ title: Optimized Rotary Design
 permalink: /project1/
 ---
 
-ESTAT Actuation
-January - August 2024
+**ESTAT Actuation**
+
+**January - August 2024**
 
 **Skills: CAD(Solidworks), Fabrication Techniques (Machining, Laser Cutting, Waterjet), FMEA, Quality Control, Project Management, Talking to Suppliers**
 
