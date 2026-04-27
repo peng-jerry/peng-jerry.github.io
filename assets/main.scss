@@ -78,3 +78,25 @@
   opacity: 0.8;
   margin: 0;
 }
+
+/* ProfPic Intro */
+.intro-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.intro-text {
+  flex: 2;
+}
+
+.intro-image {
+  flex: 1;
+}
+
+.intro-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* optional */
+}
