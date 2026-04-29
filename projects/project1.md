@@ -44,4 +44,4 @@ As well, the culmination of the project was a clutch design used in the Suzuki M
   </p>
 </div>
 
-Through this this project I was able to understand the pipeline of taking a design and turning it into a product. I gained valuable experience in thinking innovatively and being creative at every step. Learning to adapt quickly, prioritize tasks properly, and communicate effectively were vital in my success in turning this project into the success it was. 
+Through this this project I was able to understand the pipeline of taking a design and turning it into a product. I gained valuable experience in thinking innovatively and being creative at every step. Learning to adapt quickly, prioritize tasks properly, and communicate effectively were vital in turning this project into the success it was. 
