@@ -32,7 +32,7 @@ title: Projects
       </div>
       <div class="project-overlay">
         <h3>Joule Annealing Automation</h3>
-        <p class="project-subheading">MEMS 1043 - Senior Design (August - December 2024)</p>
+        <p class="project-subheading">MEMS 1043-Senior Design (August-December 2024)</p>
       </div>
     </a>
 
