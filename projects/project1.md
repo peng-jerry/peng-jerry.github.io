@@ -37,7 +37,6 @@ This process was first showcased as a part of the clutch catalog featured at the
 
 As well, the culmination of the project was a clutch design used in the Suzuki Moqba, in an order over $100,000, which was the largest order to date for the company. 
 
-![Suzuki](/assets/project1/Suzuki.jpg)
 <div style="text-align: center;">
   <img src="/assets/project1/Suzuki.jpg" alt="Suzuki" width="500">
   <p>
