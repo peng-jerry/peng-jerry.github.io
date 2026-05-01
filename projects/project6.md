@@ -21,7 +21,7 @@ In order to validate our results we must choose a controller and create a simula
 We found MPPI to be the best controller for our application. This was for a few main reasons: it was more easily tunable and had better disturbance rejection than other optimal control algorithms. As well, MPPI is not gradient-based, making it better at handling nonlinear dynamics. This means that we don't have to rely on our model to produce good steering configurations on an actual vessel.
 
 <div style="text-align: center;">
-  <img src="/assets/project_cards/mppi_sim.gif" alt="mppi_sim" width="750">
+  <img src="/assets/project_cards/mppi_sim.gif" alt="mppi_sim" width="500">
 </div>
 
 ### Simulator
@@ -35,7 +35,7 @@ In the future, we hope to implement our controller into Unreal Engine 5 to show 
 Through these, we look to show that these are able to provide the level of control and precision that we need and are looking to implement it on a physical system in the upcoming semester. 
 
 <div style="text-align: center;">
-  <img src="/assets/project6/BlueBoat.png" alt="BlueBoat" width="750">
+  <img src="/assets/project6/BlueBoat.png" alt="BlueBoat" width="500">
   <p>
     BlueBoat, USV for Robotics to perform on-water validation
   </p>
