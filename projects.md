@@ -7,7 +7,7 @@ title: Projects
   <div class="projects-grid">
 
     <div class="section-divider">
-      <span>Mechanical Design</span>
+      <span>Mechanical Design Projects </span>
     </div>
     
     <a href="/project1/" class="project-card">
@@ -31,7 +31,7 @@ title: Projects
     </a>
 
     <div class="section-divider">
-      <span>Mechatronics</span>
+      <span>Mechatronics Projects </span>
     </div>
     
     <a href="/project3/" class="project-card">
@@ -54,6 +54,10 @@ title: Projects
       </div>
     </a>
 
+     <div class="section-divider">
+      <span>Controls Projects</span>
+    </div>
+    
     <a href="/project5/" class="project-card">
       <div class="project-image">
         <img src="/assets/project_cards/Launch.png" alt="Project 5">
@@ -73,6 +77,10 @@ title: Projects
         <p class="project-subheading">Robomechanics Lab (August 2025 - Present)</p>
       </div>
     </a>
+
+    <div class="section-divider">
+      <span>Miscellaneous Projects</span>
+    </div>
     
   </div>
 </div>
