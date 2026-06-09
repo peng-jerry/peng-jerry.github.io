@@ -6,6 +6,10 @@ title: Projects
 <div class="projects-page">
   <div class="projects-grid">
 
+    <div class="section-divider">
+      <span>Mechanical Design</span>
+    </div>
+    
     <a href="/project1/" class="project-card">
       <div class="project-image">
         <img src="/assets/project_cards/ORD.png" alt="Project 1">
@@ -25,7 +29,11 @@ title: Projects
         <p class="project-subheading">ESTAT Actuation (May - August 2024)</p>
       </div>
     </a>
-  
+
+    <div class="section-divider">
+      <span>Mechatronics</span>
+    </div>
+    
     <a href="/project3/" class="project-card">
       <div class="project-image">
         <img src="/assets/project_cards/Joule.png" alt="Project 3">
