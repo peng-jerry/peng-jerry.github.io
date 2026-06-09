@@ -100,3 +100,32 @@
   height: auto;
   border-radius: 8px; /* optional */
 }
+
+.section-divider {
+  grid-column: 1 / -1;        /* spans the full grid width */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+}
+
+.section-divider span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #333;                 /* adjust to match your theme */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ccc;            /* line color */
+}
+
+.section-divider::before {
+  display: none;               /* remove this line if you want lines on both sides */
+}
