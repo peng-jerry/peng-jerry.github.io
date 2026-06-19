@@ -12,6 +12,8 @@ permalink: /project4/
 
 3-D printing has changed modern manufacturing by enabling the rapid prototyping of components that would be difficult to create using traditional subtractive methods. An important component of 3-D printing is the filament choice, which determines the material properties that the resulting print is made of. However, another way to use the filament is to combine multiple filaments together in a core-shell cross-sectional structure, resulting in a material that can have unique properties compared to single material filaments. 
 
+### Application
+
 As a part of my time in the Bajaj Lab at the University of Pittsburgh, I designed a nozzle and syringe pump system for a 3-D Printer which would be used to manufacture Core-Shell-Shell filaments for the purpose of making dielectric elastomers. These utilize a conductive ionic core and outer shell, and a dielectric center shell to allow the filament to bend or elongate when an electrical current is run through the filament.
 
 <div style="text-align: center;">
@@ -21,6 +23,8 @@ As a part of my time in the Bajaj Lab at the University of Pittsburgh, I designe
     Using dielectric elastomer filaments, we can create thin filaments that bend and elongate when powered. 
   </p>
 </div>
+
+### Design & Simulation
 
 First, I created a basic nozzle design that would would act as a preliminary prototype. This was designed in solidworks with the goal of being easily adjustable to help validate fluid flow. 
 
