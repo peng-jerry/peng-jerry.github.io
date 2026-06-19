@@ -18,7 +18,8 @@ As a part of my time in the Bajaj Lab at the University of Pittsburgh, I designe
   <img src="/assets/project4/bend.png" alt="Bend" width="250">
   <img src="/assets/project4/elongate.png" alt="Elongate" width="250">
   <p>
-    Possible applications of dielectric elastomer core-shell-shell filaments. 
+    Using dielectric elastomer filaments, we can create thin filaments that bend and elongate when powered. 
+  </p>
 </div>
 
 First, I created a basic nozzle design that would would act as a preliminary prototype. This was designed in solidworks with the goal of being easily adjustable to help validate fluid flow. 
