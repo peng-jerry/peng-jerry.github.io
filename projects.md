@@ -7,7 +7,7 @@ title: Projects
   <div class="projects-grid">
 
     <div class="section-divider">
-      <span>Mechanical Design Projects </span>
+      <span>Mechanical Design & Simulation Projects </span>
     </div>
     
     <a href="/project1/" class="project-card">
@@ -17,30 +17,6 @@ title: Projects
       <div class="project-overlay">
         <h3>Optimized Rotary Design</h3>
         <p class="project-subheading">ESTAT Actuation (January - August 2024)</p>
-      </div>
-    </a>
-  
-    <a href="/project2/" class="project-card">
-      <div class="project-image">
-        <img src="/assets/project_cards/LEET.png" alt="Project 2">
-      </div>
-      <div class="project-overlay">
-        <h3>LEET Project</h3>
-        <p class="project-subheading">ESTAT Actuation (May - August 2024)</p>
-      </div>
-    </a>
-
-    <div class="section-divider">
-      <span>Mechatronics Projects </span>
-    </div>
-    
-    <a href="/project3/" class="project-card">
-      <div class="project-image">
-        <img src="/assets/project_cards/Joule.png" alt="Project 3">
-      </div>
-      <div class="project-overlay">
-        <h3>Joule Annealing Automation</h3>
-        <p class="project-subheading">MEMS 1043-Senior Design (August-December 2024)</p>
       </div>
     </a>
 
@@ -54,19 +30,15 @@ title: Projects
       </div>
     </a>
 
+    <div class="section-divider">
+      <span>Mechatronics Projects </span>
+    </div>
+
+
+
      <div class="section-divider">
       <span>Controls Projects</span>
     </div>
-    
-    <a href="/project5/" class="project-card">
-      <div class="project-image">
-        <img src="/assets/project_cards/Launch.png" alt="Project 5">
-      </div>
-      <div class="project-overlay">
-        <h3>Launch-a-Birdie</h3>
-        <p class="project-subheading"> 24-671 EMSD (August - December 2025)</p>
-      </div>
-    </a>
 
     <a href="/project6/" class="project-card">
       <div class="project-image">
@@ -81,6 +53,16 @@ title: Projects
     <div class="section-divider">
       <span>Miscellaneous Projects</span>
     </div>
+    
+    <a href="/project3/" class="project-card">
+      <div class="project-image">
+        <img src="/assets/project_cards/Joule.png" alt="Project 3">
+      </div>
+      <div class="project-overlay">
+        <h3>Joule Annealing Automation</h3>
+        <p class="project-subheading">MEMS 1043-Senior Design (August-December 2024)</p>
+      </div>
+    </a>
     
   </div>
 </div>
