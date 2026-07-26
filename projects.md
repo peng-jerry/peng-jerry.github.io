@@ -31,6 +31,20 @@ title: Projects
     </a>
 
     <div class="section-divider">
+      <span>Controls Projects</span>
+    </div>
+
+    <a href="/project6/" class="project-card">
+      <div class="project-image">
+        <img src="/assets/project_cards/mppi_sim.gif" alt="Project 6">
+      </div>
+      <div class="project-overlay">
+        <h3>Boat Project</h3>
+        <p class="project-subheading">Robomechanics Lab (August 2025 - Present)</p>
+      </div>
+    </a>
+    
+    <div class="section-divider">
       <span>Mechatronics Projects </span>
     </div>
     
@@ -45,19 +59,7 @@ title: Projects
     </a>
 
 
-     <div class="section-divider">
-      <span>Controls Projects</span>
-    </div>
 
-    <a href="/project6/" class="project-card">
-      <div class="project-image">
-        <img src="/assets/project_cards/mppi_sim.gif" alt="Project 6">
-      </div>
-      <div class="project-overlay">
-        <h3>Boat Project</h3>
-        <p class="project-subheading">Robomechanics Lab (August 2025 - Present)</p>
-      </div>
-    </a>
 
     <div class="section-divider">
       <span>Miscellaneous Projects</span>
