@@ -33,7 +33,16 @@ title: Projects
     <div class="section-divider">
       <span>Mechatronics Projects </span>
     </div>
-
+    
+    <a href="/project5/" class="project-card">
+      <div class="project-image">
+        <img src="/assets/project_cards/Launch.png" alt="Project 5">
+      </div>
+      <div class="project-overlay">
+        <h3>Launch-a-Birdie</h3>
+        <p class="project-subheading"> 24-671 EMSD (August - December 2025)</p>
+      </div>
+    </a>
 
 
      <div class="section-divider">
