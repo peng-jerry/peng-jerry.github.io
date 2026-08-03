@@ -8,11 +8,18 @@ Badminton players need to practice many skills to improve their performance at t
 
 Through the Launch-a-Birdie project, we set out to design a low-cost robotic launcher that could help these players achieve these results.
 
-We broke the system into four subsystems — storage, feeding, aiming, and launching — and worked through structured concept generation, decision matrices, and CAD development for each. We landed on a rotating base for aiming, a star-wheel indexer for feeding, dual counter-rotating flywheels for launching, and a simple gravity tube for storage.
+We broke the system into four subsystems — storage, feeding, aiming, and launching — and worked through structured concept generation, and CAD development for each. We landed on a rotating base for aiming, a star-wheel indexer for feeding, dual counter-rotating flywheels for launching, and a simple tube for storage.
 
-Full CAD Model of our design
+<div style="text-align: center;">
+  <img src="/assets/project_cards/Launch.png" alt="Bend" width="250">
+  <p>
+    Full CAD Model of our design
+  </p>
+</div>
 
-Once that was completed, I primarily worked on the electrical wiring and code work for our motors to ensure our design worked. This included testing of the motors, 
+Once that was completed, I primarily worked on the electrical wiring and code work for our motors to ensure our design worked. This included testing of the motors, power distribution, and programming of the motors. 
+
+
 
 Through this, I learned basic control & arduino, as well as how to improvise when things don't go properly. 
 One of the biggest challenges was 
