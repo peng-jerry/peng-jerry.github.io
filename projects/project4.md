@@ -4,8 +4,8 @@ title: Development of a Core-Shell-Shell 3-D Printer for the Manufacturing of Di
 permalink: /project4/
 ---
 
-**Bajaj Lab**
-**August 2024 - May 2025**
+**Bajaj Lab**  
+**August 2024 - May 2025**  
 **Skills: Solidworks, COMSOL, Motor Control, SLA 3-D Printing**
 
 ### Design Motivation
