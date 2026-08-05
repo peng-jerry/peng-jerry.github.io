@@ -20,8 +20,8 @@ We broke the system into four subsystems — storage, feeding, aiming, and launc
 Once that was completed, I primarily worked on the electrical wiring and code work for our motors to ensure our design worked. This included testing of the motors, power distribution, and programming of the motors. 
 
 <div style="text-align: center;">
-  <img src="/assets/project5/Wiring.png" alt="Wiring">
-  <img src="/assets/project5/Arduino.png" alt="Arduino">
+  <img src="/assets/project5/Wiring.png" alt="Wiring" width = "300">
+  <img src="/assets/project5/Arduino.png" alt="Arduino" width = "300">
   <p>
     Pinout diagram for the Arduino as well as graphics to demonstrate power & control distribution 
   </p>
@@ -41,7 +41,7 @@ We then validated our launcher by performing reliability, range and accuracy tes
 Overall, I was very satisfied with how our design turned out. Launch-a-birdie allowed us to take a concept, generate design specifications, manufacture prototypes and turn it into a working electromechanical system. Through the project, I gained many technical skills in mechatronics and also invaluable experience in working on a team. 
 
 <iframe width="560" height="315" 
-  src="https://www.youtube.com/watch?v=mdqb5lIQJjg" 
+  src="https://www.youtube.com/embed/mdqb5lIQJjg" 
   title="Launch-a-Birdie" 
   frameborder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
