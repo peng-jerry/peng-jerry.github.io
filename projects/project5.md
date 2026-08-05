@@ -3,6 +3,9 @@ layout: page
 title: Launch-a-Birdie
 permalink: /project5/
 ---
+**24-671 Electro-mechanical Systems Design**  
+**August - December 2025**  
+**Skills: CAD, Rapid Prototyping, Mechatronics, Motor Control & Arduino, C, Soldering**
 
 ### Problem Definition
 Badminton players need to practice many skills to improve their performance at the game. However, some drills require the shots to be practiced at high volume and high consistency in order to get a meaningful practice session. In most cases, these conditions cannot be provided by other players as they cannot hit the birdie consistently and continuously for the volume necessary for these practice drills.
