@@ -20,7 +20,7 @@ As a part of my time in the Bajaj Lab at the University of Pittsburgh, I designe
   <img src="/assets/project4/bend.png" alt="Bend" width="300">
   <img src="/assets/project4/elongate.png" alt="Elongate" width="300">
   <p>
-    Taken from Fiber-Format Dielectric Elastomer Actuators by the Meter https://doi.org/10.1002/adfm.202314056
+    Taken from "Fiber-Format Dielectric Elastomer Actuators by the Meter (https://doi.org/10.1002/adfm.202314056)"
   </p>
 </div>
 
@@ -40,12 +40,12 @@ Next, we needed to ensure that the fluid flow was laminar as it exited the nozzl
 
 From the simulation, the maximum Reynolds number generated was ~100, way lower than the 2000 threshold required to be laminar. 
 
-Lastly, each fluid needs to be added to the nozzle at a different rate as to ensure all the fluids flow at the same velocity, the volumetric flow must be different for each fluids. For this, I designed 3 pumps with Luer lock syringes that would be used to introduce unique flow rates allowing the fluids to all flow at the same rate. 
+Lastly, since each fluid occupies a different cross-sectional area within the nozzle, matching their exit velocities requires introducing each fluid at a different volumetric flow rate. To achieve this, I built three independent syringe pumps using Luer lock syringes, each capable of driving a unique flow rate so that all three fluids would exit the nozzle at the same velocity.
 
 <div style="text-align: center;">
   <img src="/assets/project4/syringes.png" alt="Syringes" width="750">
   <p>
-    3 independent syringe pumps to control the volumetric flow rate of each liquid. 
+    3 independent controlled stepper motors allow each fluid to be pumped at a different rate. 
   </p>
 </div>
 
