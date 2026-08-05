@@ -36,7 +36,7 @@ title: Projects
 
     <a href="/project6/" class="project-card">
       <div class="project-image">
-        <img src="/assets/project_cards/mppi_sim.gif" alt="Project 6">
+        <img src="/assets/project6/BlueBoat.png" alt="Project 6">
       </div>
       <div class="project-overlay">
         <h3>Boat Project</h3>
