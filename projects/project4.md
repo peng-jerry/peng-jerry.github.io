@@ -5,9 +5,7 @@ permalink: /project4/
 ---
 
 **Bajaj Lab**
-
 **August 2024 - May 2025**
-
 **Skills: Solidworks, COMSOL, Motor Control, SLA 3-D Printing**
 
 3-D printing has changed modern manufacturing by enabling the rapid prototyping of components that would be difficult to create using traditional subtractive methods. An important component of 3-D printing is the filament choice, which determines the material properties that the resulting print is made of. However, another way to use the filament is to combine multiple filaments together in a core-shell cross-sectional structure, resulting in a material that can have unique properties compared to single material filaments. 
