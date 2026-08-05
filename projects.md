@@ -25,7 +25,7 @@ title: Projects
         <img src="/assets/project_cards/Printer.png" alt="Project 4">
       </div>
       <div class="project-overlay">
-        <h3>Core-Shell-Shell 3-D Printer</h3>
+        <h3>Core-Shell 3-D Printer</h3>
         <p class="project-subheading">Bajaj Research Lab (August 2024 - May 2025)</p>
       </div>
     </a>
