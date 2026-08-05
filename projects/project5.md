@@ -28,7 +28,7 @@ Once that was completed, I primarily worked on the electrical wiring and code wo
 
 <div style="text-align: center;">
   <img src="/assets/project5/Wiring.png" alt="Wiring">
-  <img src="/assets/project5/Arduino.png" alt="Arduino" width = "600">
+  <img src="/assets/project5/Arduino.png" alt="Arduino">
   <p>
     Pinout diagram for the Arduino as well as graphics to demonstrate power & control distribution 
   </p>
