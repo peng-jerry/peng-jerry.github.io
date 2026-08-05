@@ -3,10 +3,8 @@ layout: page
 title: Automation of Joule-Annealing of Amorphous, Nano-crystalline Soft Magnetic Materials
 permalink: /project3/
 ---
-**MEMS 1043 Senior Design, Ohodnicki Lab**
-
-**August - December 2024**
-
+**MEMS 1043 Senior Design, Ohodnicki Lab**  
+**August - December 2024**  
 **Skills: Python, Sensor Integration & Data Collection, Process Improvement**
 
 In electrical power grid applications, the use of a transformer is very important. They help to step up or down voltage to be used in many applications. However, in doing so, we lose a lot of energy using the hard magnets that are standard in these transformers. As a part of Professor Ohodnicki’s lab, we were looking into using soft magnetic materials to reduce the hysteresis and eddy current loss to make these devices more efficient. 
