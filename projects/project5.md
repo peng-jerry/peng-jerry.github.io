@@ -33,7 +33,7 @@ As well, a challenge we faced was utilizing breadboards verses circuit boards. O
 
 We then validated our launcher by performing reliability, range and accuracy tests. These demonstrated the efficacy of our design and how we hit performance targets. 
 
-<div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
   <img src="/assets/project5/Landing.png" alt="Landing" width="400">
   <iframe width="315" height="560" 
     src="https://www.youtube.com/embed/uIVPQudsb98" 
