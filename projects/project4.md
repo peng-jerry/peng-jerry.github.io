@@ -35,7 +35,7 @@ First, I created a basic nozzle design that would would act as a preliminary pro
 Next, we needed to ensure that the fluid flow was laminar as it exited the nozzle. I utilized COMSOL, which generated Reynolds numbers for all 3 fluids. This allowed us to validate that the liquids would not be turbulent as they exited the nozzle.
 
 <div style="text-align: center;">
-  <img src="/assets/project4/COMSOL.png" alt="COMSOL" width="600">
+  <img src="/assets/project4/COMSOL.png" alt="COMSOL" width="300">
 </div>
 
 From the simulation, the maximum Reynolds number generated was ~100, way lower than the 2000 threshold required to be laminar. 
