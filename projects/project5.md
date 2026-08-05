@@ -27,7 +27,7 @@ We broke the system into four subsystems — storage, feeding, aiming, and launc
 Once that was completed, I primarily worked on the electrical wiring and code work for our motors to ensure our design worked. This included testing of the motors, power distribution, and programming of the motors. 
 
 <div style="text-align: center;">
-  <img src="/assets/project5/Wiring.png" alt="Wiring" width = "600">
+  <img src="/assets/project5/Wiring.png" alt="Wiring">
   <img src="/assets/project5/Arduino.png" alt="Arduino" width = "600">
   <p>
     Pinout diagram for the Arduino as well as graphics to demonstrate power & control distribution 
