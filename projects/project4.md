@@ -20,7 +20,7 @@ As a part of my time in the Bajaj Lab at the University of Pittsburgh, I designe
   <img src="/assets/project4/bend.png" alt="Bend" width="300">
   <img src="/assets/project4/elongate.png" alt="Elongate" width="300">
   <p>
-    Taken from "Fiber-Format Dielectric Elastomer Actuators by the Meter (https://doi.org/10.1002/adfm.202314056)"
+    Taken from "Fiber-Format Dielectric Elastomer Actuators by the Meter" (https://doi.org/10.1002/adfm.202314056)
   </p>
 </div>
 
