@@ -55,7 +55,7 @@ We then validated our launcher by performing reliability, range and accuracy tes
 Overall, I was very satisfied with how our design turned out. Launch-a-birdie allowed us to take a concept, generate design specifications, manufacture prototypes and turn it into a working electromechanical system. Through the project, I gained many technical skills in mechatronics and also invaluable experience in working on a team. 
 
 <div style="text-align: center;">
-  <iframe" 
+  <iframe width="700" height="394"
     src="https://www.youtube.com/embed/OOZ5I-UKoXw?mute=1" 
     title="Launch-a-Birdie" 
     frameborder="0" 
@@ -65,7 +65,7 @@ Overall, I was very satisfied with how our design turned out. Launch-a-birdie al
   <p>
     Demonstration of using the touchscreen to change between shot types 
   </p>
-  <iframe" 
+  <iframe width="700" height="394" 
     src="https://www.youtube.com/embed/mdqb5lIQJjg?mute=1" 
     title="Launch-a-Birdie" 
     frameborder="0" 
