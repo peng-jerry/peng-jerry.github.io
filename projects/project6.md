@@ -9,7 +9,7 @@ permalink: /project6/
 
 **Skills: Python, Unreal Engine 5, MPPI & Optimal Control**
 
-Unmanned Surface Vehicles (USVs) are vital for performing maritime tasks without the need for a human crew. Autonomous Oeration allow USVs to perform tasks in hazardous or hard-to-reach areas, reducing risks to human life.
+Unmanned Surface Vehicles (USVs) are vital for performing maritime tasks without the need for a human crew. Autonomous Operation allow USVs to perform tasks in hazardous or hard-to-reach areas, reducing risks to human life.
 
 However, designing USVs presents several challenges. Most notably, boat and water dynamics are often uncertain and too complex to model accurately, and while long-horizon control strategies exist, they are typically not well suited to handle sudden disturbances or changes in direction. 
 
