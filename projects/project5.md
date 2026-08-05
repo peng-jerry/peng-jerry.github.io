@@ -36,7 +36,7 @@ We then validated our launcher by performing reliability, range and accuracy tes
 <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
   <img src="/assets/project5/Landing.png" alt="Landing" width="400">
   <iframe width="315" height="560" 
-    src="https://www.youtube.com/embed/uIVPQudsb98" 
+    src="https://www.youtube.com/embed/uIVPQudsb98?mute=1" 
     title="YouTube Shorts player" 
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -48,7 +48,7 @@ Overall, I was very satisfied with how our design turned out. Launch-a-birdie al
 
 <div style="text-align: center;">
   <iframe width="640" height="360" 
-    src="https://www.youtube.com/embed/OOZ5I-UKoXw" 
+    src="https://www.youtube.com/embed/OOZ5I-UKoXw?mute=1" 
     title="Launch-a-Birdie" 
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -58,7 +58,7 @@ Overall, I was very satisfied with how our design turned out. Launch-a-birdie al
     Demonstration of using the touchscreen to change between shot types 
   </p>
   <iframe width="640" height="360" 
-    src="https://www.youtube.com/embed/mdqb5lIQJjg" 
+    src="https://www.youtube.com/embed/mdqb5lIQJjg?mute=1" 
     title="Launch-a-Birdie" 
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
