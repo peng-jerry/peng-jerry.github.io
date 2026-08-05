@@ -46,5 +46,5 @@ Lastly, since each fluid occupies a different cross-sectional area within the no
   </p>
 </div>
 
-This project established a foundation for future use to produce core-shell-shell filaments. The COMSOL simulations and prototype syringe pump testing demonstrates the viability of the project while leaving room for future improvements and design changes. Overall, this has been by far my most-open ended project. It gave me insights into the research process, as well has learning to be independent and generating next steps. 
+This project established a foundation for future use to produce core-shell-shell filaments. The COMSOL simulations and prototype syringe pump testing demonstrates the viability of the project while leaving room for future improvements and design changes. Overall, this has been by far my most-open ended project. It gave me insights into the research process, as well as learning to be independent and generating next steps. 
 
