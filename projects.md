@@ -70,8 +70,8 @@ title: Projects
         <img src="/assets/project_cards/Joule.png" alt="Project 3">
       </div>
       <div class="project-overlay">
-        <h3>Joule Annealing Automation</h3>
-        <p class="project-subheading">MEMS 1043-Senior Design (August-December 2024)</p>
+        <h3>Joule Anneal Automation</h3>
+        <p class="project-subheading">MEMS Senior Design (August-December 2024)</p>
       </div>
     </a>
     
