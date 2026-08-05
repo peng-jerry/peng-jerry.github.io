@@ -20,8 +20,8 @@ We broke the system into four subsystems — storage, feeding, aiming, and launc
 Once that was completed, I primarily worked on the electrical wiring and code work for our motors to ensure our design worked. This included testing of the motors, power distribution, and programming of the motors. 
 
 <div style="text-align: center;">
-  <img src="/assets/project5/Wiring.png" alt="Wiring" width = "350">
-  <img src="/assets/project5/Arduino.png" alt="Arduino" width = "350">
+  <img src="/assets/project5/Wiring.png" alt="Wiring" width = "500">
+  <img src="/assets/project5/Arduino.png" alt="Arduino" width = "500">
   <p>
     Pinout diagram for the Arduino as well as graphics to demonstrate power & control distribution 
   </p>
@@ -34,10 +34,10 @@ As well, a challenge we faced was utilizing breadboards verses circuit boards. O
 We then validated our launcher by performing reliability, range and accuracy tests. These demonstrated the efficacy of our design and how we hit performance targets. 
 
 <div style="text-align: center;">
-  <img src="/assets/project5/Landing.png" alt="Landing">
-  <iframe height="315" 
-    src="https://https://www.youtube.com/shorts/uIVPQudsb98" 
-    title="Launch-a-Birdie" 
+  <img src="/assets/project5/Landing.png" alt="Landing" width = "400">
+  <iframe width="315" height="560" 
+    src="https://www.youtube.com/embed/uIVPQudsb98" 
+    title="YouTube Shorts player" 
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     allowfullscreen>
@@ -47,8 +47,8 @@ We then validated our launcher by performing reliability, range and accuracy tes
 Overall, I was very satisfied with how our design turned out. Launch-a-birdie allowed us to take a concept, generate design specifications, manufacture prototypes and turn it into a working electromechanical system. Through the project, I gained many technical skills in mechatronics and also invaluable experience in working on a team. 
 
 <div style="text-align: center;">
-  <iframe width="650" height="315" 
-    src="https://www.youtube.com/watch?v=OOZ5I-UKoXw" 
+  <iframe width="640" height="360" 
+    src="https://www.youtube.com/embed/OOZ5I-UKoXw" 
     title="Launch-a-Birdie" 
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -57,7 +57,7 @@ Overall, I was very satisfied with how our design turned out. Launch-a-birdie al
   <p>
     Demonstration of using the touchscreen to change between shot types 
   </p>
-  <iframe width="560" height="315" 
+  <iframe width="640" height="360" 
     src="https://www.youtube.com/embed/mdqb5lIQJjg" 
     title="Launch-a-Birdie" 
     frameborder="0" 
@@ -65,7 +65,7 @@ Overall, I was very satisfied with how our design turned out. Launch-a-birdie al
     allowfullscreen>
   </iframe>
   <p>
-    A final video of me rallying with the machine! 
+    A final video of me rallying with the launcher! 
   </p>
 
 </div>
