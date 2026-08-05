@@ -27,7 +27,7 @@ Through this pipeline I created over 20 new custom rotary designs, and decreased
 This process was first showcased as a part of the clutch catalog featured at the 2024 Automate Demo, where it was shared with many compaines in the robotics and automation industry. 
 
 <div style="text-align: center;">
-  <img src="/assets/project1/AutomateCC.jpg" alt="AutomateCC" width="300">
+  <img src="/assets/project1/AutomateCC.jpg" alt="AutomateCC" width="450">
   <p>
     Clutch Catalog
   </p>
