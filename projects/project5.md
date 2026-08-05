@@ -4,6 +4,7 @@ title: Launch-a-Birdie
 permalink: /project5/
 ---
 
+### Problem Definition
 Badminton players need to practice many skills to improve their performance at the game. However, some drills require the shots to be practiced at high volume and high consistency in order to get a meaningful practice session. In most cases, these conditions cannot be provided by other players as they cannot hit the birdie consistently and continuously for the volume necessary for these practice drills.
 
 Through the Launch-a-Birdie project, we set out to design a low-cost robotic launcher that could help these players achieve these results.
@@ -17,6 +18,7 @@ We broke the system into four subsystems — storage, feeding, aiming, and launc
   </p>
 </div>
 
+### Electrical Design
 Once that was completed, I primarily worked on the electrical wiring and code work for our motors to ensure our design worked. This included testing of the motors, power distribution, and programming of the motors. 
 
 <div style="text-align: center;">
@@ -31,6 +33,7 @@ This was my first hands-on experience designing a full electrical system from sc
 
 As well, a challenge we faced was utilizing breadboards verses circuit boards. On one hand, breadboards made changing circuits and wires easy, but increased overall complexity as you had to ensure every wire was correctly placed. They also had a tendency to come loose which would be a pain to place back in the correct location. On the other hand, when we used circuit boards, our soldering was sometimes imperfect, and if we had to make a change it required a lot of effort to correct. If I had to do this project over again, I would work to design a custom PCB, or buy an off-the-shelf component rather than soldering my own or using breadboards. 
 
+### Validation & Results
 We then validated our launcher by performing reliability, range and accuracy tests. These demonstrated the efficacy of our design and how we hit performance targets. 
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
