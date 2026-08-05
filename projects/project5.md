@@ -9,12 +9,14 @@ Badminton players need to practice many skills to improve their performance at t
 
 Through the Launch-a-Birdie project, we set out to design a low-cost robotic launcher that could help these players achieve these results.
 
+### Mechanical Design
+
 We broke the system into four subsystems — storage, feeding, aiming, and launching — and worked through structured concept generation, and CAD development for each. We landed on a rotating base for aiming, a star-wheeled feeding system, dual flywheels for launching, a simple tube for storage, and a touchscreen to perform different shot types. 
 
 <div style="text-align: center;">
   <img src="/assets/project_cards/Launch.png" alt="Launch">
   <p>
-    Full CAD Model of our design
+    Full CAD Assembly of our design
   </p>
 </div>
 
