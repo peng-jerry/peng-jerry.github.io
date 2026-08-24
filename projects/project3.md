@@ -11,9 +11,6 @@ In electrical power grid applications, the use of a transformer is very importan
 
 <div style="text-align: center;">
   <img src="/assets/project3/Loss.png" alt="Joule">
-  <p>
-    Hysteresis Loss and Eddy Current Loss in Transformers
-  </p>
 </div>
 
 An important part of the process in making these is “Joule Annealing”, which helps us to make these soft magnetic ribbons into the desired crystalline structure to utilize their optimal material properties. However, this process is slow and manual. 
