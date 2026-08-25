@@ -130,33 +130,3 @@
   display: none;               /* remove this line if you want lines on both sides */
 }
 
-.site-footer {
-  border-top: 1px solid #e8e8e8;
-  padding: 30px 0;
-}
-
-.footer-col-wrapper {
-  display: flex;
-  gap: 40px;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.footer-col {
-  flex: 1;
-}
-
-.footer-col p {
-  margin: 0 0 8px 0;
-  line-height: 1.5;
-}
-
-.footer-col a {
-  color: #666;
-  text-decoration: none;
-}
-
-.footer-col a:hover {
-  color: #2a7ae2;
-  text-decoration: underline;
-}
