@@ -12,6 +12,9 @@
     <p>
       I enjoy hands-on engineering work and am seeking entry-level mechanical engineering roles in mechanical design, mechatronics, controls, and robotics!
     </p>  
+    <p>
+      Take a look at my projects under the projects tab, and feel free to reach out by email if you'd like to chat about any opportunities.
+    </p>  
     
   </div>
   <div class="intro-image">
