@@ -27,7 +27,7 @@
   --shadow: 0 14px 36px rgba(0, 0, 0, .35);
 
   --maxw: 1100px;
-  --navh: 72px;
+  --navh: 68px;
 
   --nav-bg: rgba(10, 15, 28, .72);
   --font: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -125,16 +125,15 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 .brand {
   color: var(--text);
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.02rem;
   letter-spacing: -.01em;
-  white-space: nowrap;
 }
 .brand:hover { text-decoration: none; color: var(--accent); }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   list-style: none;
   margin: 0 0 0 auto;          /* pushes the tabs to the right edge */
   padding: 0;
@@ -142,24 +141,25 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 
 .nav-links a {
   display: block;
-  padding: 8px 15px;
+  padding: 7px 14px;
   border-radius: 8px;
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 1rem;
+  font-size: .82rem;
   font-weight: 500;
+  letter-spacing: .02em;
   transition: background .2s ease, color .2s ease;
 }
 .nav-links a:hover { background: var(--surface); color: var(--text); text-decoration: none; }
 .nav-links a[aria-current="page"] { color: var(--accent); background: var(--surface); }
 
-.nav-right { display: flex; align-items: center; gap: 8px; margin-left: 12px; }
+.nav-right { display: flex; align-items: center; gap: 8px; margin-left: 10px; }
 
 .icon-btn {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   padding: 0;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -169,7 +169,7 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
   transition: background .2s ease, color .2s ease;
 }
 .icon-btn:hover { background: var(--surface); color: var(--text); }
-.icon-btn svg { width: 18px; height: 18px; }
+.icon-btn svg { width: 17px; height: 17px; }
 
 .nav-toggle { display: none; }
 
@@ -236,15 +236,16 @@ main { flex: 1 0 auto; padding: 3.5rem 0 4.5rem; }
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 13px 24px;
+  gap: 9px;
+  padding: 11px 22px;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: transparent;
   color: var(--text);
   font-family: var(--mono);
-  font-size: 1rem;
+  font-size: .86rem;
   font-weight: 500;
+  letter-spacing: .01em;
   cursor: pointer;
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
 }
@@ -269,7 +270,7 @@ main { flex: 1 0 auto; padding: 3.5rem 0 4.5rem; }
   box-shadow: 0 10px 24px rgba(14, 165, 233, .34);
 }
 
-.btn svg { width: 18px; height: 18px; flex: none; }
+.btn svg { width: 16px; height: 16px; flex: none; }
 
 /* ---------- Projects grid ---------- */
 .projects-grid {
@@ -509,7 +510,8 @@ figcaption {
   padding: 3rem 0 2.2rem;
 }
 
-/* Identity on the left, every contact link on the right */
+/* Contact on the left, identity on the right. The name stays first in the
+   markup so the heading order is correct; order:-1 does the visual swap. */
 .footer-top {
   display: flex;
   flex-wrap: wrap;
@@ -517,6 +519,9 @@ figcaption {
   align-items: flex-start;
   gap: 2.5rem;
 }
+
+.footer-contact { order: -1; }
+.footer-identity { text-align: right; }
 
 .footer-heading {
   margin: 0 0 .35rem;
@@ -555,37 +560,28 @@ figcaption {
 .contact-list a:hover { color: var(--accent); text-decoration: none; }
 .contact-list svg { width: 18px; height: 18px; flex: none; fill: currentColor; }
 
-/* ---------- Credits: wide and short, not a tall stack ---------- */
+/* ---------- Credits: flowing paragraphs across the full width ---------- */
 .footer-credits {
   margin-top: 2.6rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.75;
 }
+.footer-credits p { margin: 0 0 .8rem; }
 
-.credit-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 1.3rem 2.5rem;
-  margin: 0;
-}
+.footer-credits a { color: var(--muted); text-decoration: underline; }
+.footer-credits a:hover { color: var(--accent); }
 
-.credit dt {
+.credit-label {
   font-family: var(--mono);
-  font-size: .72rem;
+  font-size: .74rem;
   font-weight: 500;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--accent);
 }
-
-.credit dd {
-  margin: .35rem 0 0;
-  color: var(--muted);
-  font-size: .86rem;
-  line-height: 1.6;
-}
-.credit dd a { color: var(--muted); text-decoration: underline; }
-.credit dd a:hover { color: var(--accent); }
 
 .copyright {
   margin: 1.8rem 0 0;
@@ -623,7 +619,7 @@ figcaption {
     border-top: 1px solid var(--border);
   }
   .nav-links.open { display: flex; }
-  .nav-links a { padding: 12px 14px; }
+  .nav-links a { padding: 11px 14px; font-size: .88rem; }
 
   .projects-grid { grid-template-columns: 1fr; gap: 20px; }
 
@@ -646,7 +642,10 @@ figcaption {
   .resume-doc { display: none; }
   .resume-img { display: block; }
 
-  .footer-top { gap: 2rem; }
+  /* Stacked on a phone, the name leads and everything aligns left again */
+  .footer-top { gap: 1.8rem; }
+  .footer-contact { order: 0; }
+  .footer-identity { text-align: left; }
 
   figure { margin: 1.6rem 0; }
   .figure-pair { gap: 14px; }
