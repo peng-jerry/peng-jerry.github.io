@@ -39,6 +39,12 @@ since the blocks are byte-identical.
 - `main` — what is published at peng-jerry.github.io
 - `minima` — the previous Jekyll/Minima version, kept for reference
 
+## AI assistance
+
+This site was rebuilt with Claude Code acting as a coding assistant for the
+markup and styling. [PROMPTS.md](PROMPTS.md) is a verbatim log of the prompts
+used.
+
 ## Credits
 
 - Colour palette adapted from [Linbo Gao's portfolio](https://linbo271828-cell.github.io/github.io/)
