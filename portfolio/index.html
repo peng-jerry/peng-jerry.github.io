@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/css/style.css">
 <script>/* Apply the saved theme before first paint so the page never flashes. */
 (function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();</script>
@@ -18,10 +18,7 @@
 
 <header class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="/">
-      <span class="brand-mark" aria-hidden="true">JP</span>
-      <span>Jerry Peng<span class="brand-sub">Mechanical Engineering</span></span>
-    </a>
+    <a class="brand" href="/">Jerry Peng</a>
 
     <ul class="nav-links" id="nav-links">
       <li><a href="/">Home</a></li>
@@ -56,9 +53,9 @@
     <div class="prose">
 
       <div class="project-meta">
-        <p><strong>Personal Project</strong></p>
-        <p><strong>2026</strong></p>
-        <p class="skills"><strong>Skills: HTML, CSS (Grid, Flexbox, Custom Properties), JavaScript, Responsive Design, Web Accessibility, Git &amp; GitHub Pages</strong></p>
+        <p class="meta-org">Personal Project</p>
+        <p class="meta-date">2026</p>
+        <p class="meta-skills">Skills: HTML, CSS (Grid, Flexbox, Custom Properties), JavaScript, Responsive Design, Web Accessibility, Git &amp; GitHub Pages</p>
       </div>
 
       <p>This website is a project in its own right. The first version was a Jekyll site running on the stock Minima theme, which was quick to stand up but left me with very little control over layout and almost no say in how the site actually looked. I rebuilt it from scratch as a static site so that every piece of the design was something I chose.</p>
@@ -68,6 +65,8 @@
       <p>I set out with four goals: the writing had to stay exactly as it was, the site had to read comfortably on a phone as well as a laptop, a visitor had to be able to reach any project in one click from anywhere on the site, and my contact information had to be visible at the bottom of every page.</p>
 
       <p>The color scheme is a deep navy background with sky-blue and indigo accents, adapted from a classmate&rsquo;s portfolio that I liked the look of (credited in the footer). Because engineering figures and CAD screenshots are usually rendered on a white background, I added a light theme as well &mdash; the toggle sits in the navigation bar and remembers your choice between visits.</p>
+
+      <p>I did not want to borrow the whole look along with the palette, so the typography and the background are my own. The type is IBM Plex Sans with IBM Plex Mono carrying the dates, skills, and section labels, and a faint drafting grid sits behind the page instead of a colour wash. The result reads more like engineering documentation, which suits what the site is actually full of.</p>
 
       <h3>How It Is Built</h3>
 
@@ -114,7 +113,6 @@
       </div>
 
       <div class="footer-col">
-        <h3>Elsewhere</h3>
         <ul class="contact-list">
           <li>
             <a href="https://github.com/peng-jerry" rel="noopener">
@@ -132,7 +130,6 @@
       </div>
 
       <div class="footer-col">
-        <h3>About this site</h3>
         <p>Portfolio</p>
       </div>
     </div>
