@@ -272,6 +272,17 @@ main { flex: 1 0 auto; padding: 3.5rem 0 4.5rem; }
 
 .btn svg { width: 16px; height: 16px; flex: none; }
 
+.game-embed {
+  margin: 2rem 0;
+  text-align: center;
+}
+.game-embed .hint {
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: .82rem;
+  color: var(--muted);
+}
+
 /* ---------- Projects grid ---------- */
 .projects-grid {
   display: grid;

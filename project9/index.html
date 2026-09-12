@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="/css/style.css">
 <script>/* Apply the saved theme before first paint so the page never flashes. */
 (function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();</script>
-<title>Projects &middot; Jerry Peng</title>
-<meta name="description" content="Mechanical design, controls, mechatronics, and simulation projects by Jerry Peng.">
+<title>Crossy Road Remake &middot; Jerry Peng</title>
+<meta name="description" content="A from-scratch, dependency-free remake of Crossy Road built with Three.js, HTML, CSS, and JavaScript.">
 </head>
 <body>
 
@@ -42,98 +42,51 @@
 <main id="main">
   <div class="container">
 
-    <h1 class="page-title">Projects</h1>
+    <a class="back-link" href="/projects.html">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      All projects
+    </a>
+
+    <h1 class="page-title">Crossy Road Remake</h1>
     <div class="title-rule"></div>
 
-    <div class="projects-grid">
+    <div class="prose">
 
-      <div class="section-divider">
-        <span>Mechanical Design &amp; Simulation Projects</span>
+      <div class="project-meta">
+        <p class="meta-org">15-113</p>
+        <p class="meta-date">Homework 2</p>
+        <p class="meta-skills">Skills: JavaScript, Three.js (WebGL), HTML &amp; CSS, Procedural Generation</p>
       </div>
 
-      <a href="/project1/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/ORD.png" alt="Optimized Rotary Design clutch components" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Optimized Rotary Design</h3>
-          <p class="project-subheading">ESTAT Actuation (January - August 2024)</p>
-        </div>
-      </a>
+      <p>A from-scratch remake of <em>Crossy Road</em> built with plain HTML, CSS, and JavaScript on top of Three.js, designed to run as a static page with no build step. Hop a voxel chicken across endless procedurally-generated roads, rivers, and rail lines, and see how far you can get before a car, a train, or the river gets you.</p>
 
-      <!-- The LEET write-up lives at /project2/ but is deliberately not shown here. -->
-
-      <a href="/project4/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/Printer.png" alt="Core-shell 3-D printer nozzle and syringe pump system" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Core-Shell 3-D Printer</h3>
-          <p class="project-subheading">Bajaj Research Lab (August 2024 - May 2025)</p>
-        </div>
-      </a>
-
-      <div class="section-divider">
-        <span>Controls Projects</span>
+      <div class="game-embed">
+        <a class="btn btn-primary" href="/crossyroad/">
+          Play the Game
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="hint">Arrow keys / WASD / swipe &middot; best runs are saved locally in your browser</p>
       </div>
 
-      <a href="/project6/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project6/BlueBoat.png" alt="BlueBoat unmanned surface vehicle" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Boat Project</h3>
-          <p class="project-subheading">Robomechanics Lab (August 2025 - Present)</p>
-        </div>
-      </a>
+      <h3>Core Mechanics</h3>
 
-      <div class="section-divider">
-        <span>Mechatronics Projects</span>
-      </div>
+      <p>Your score is the furthest row you have ever reached in the current run. You can hop backward a little to dodge a car, but a translucent, pulsing hazard-stripe curtain keeps you from retreating too far &mdash; matching the original&rsquo;s &ldquo;the camera won&rsquo;t let you go back&rdquo; feel. Roads carry cars at varying speed and direction per lane, rivers require riding floating logs, and rail lines are safe to stand on until a warning light signals an oncoming train. Lanes are generated ahead of you on the fly and pruned once they are far behind, so the run never runs out of road, and your best score is saved to local storage between visits.</p>
 
-      <a href="/project5/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/Launch.png" alt="Launch-a-Birdie badminton launcher CAD assembly" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Launch-a-Birdie</h3>
-          <p class="project-subheading">24-671 EMSD (August - December 2025)</p>
-        </div>
-      </a>
+      <h3>Powerups</h3>
 
-      <div class="section-divider">
-        <span>Miscellaneous Projects</span>
-      </div>
+      <p>Glowing gems occasionally appear on open, walkable ground. Picking one up grants a Shield that absorbs one hit, a Floatie that lets you cross water without a log the moment you would otherwise drown, a double-score boost, or Frog legs that let you hop two cells at a time &mdash; each with its own visible effect on the chicken while active.</p>
 
-      <a href="/project3/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/Joule.png" alt="In-process monitoring plot of a Joule anneal" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Joule Anneal Automation</h3>
-          <p class="project-subheading">MEMS Senior Design (August-December 2024)</p>
-        </div>
-      </a>
+      <h3>The 2.5D Look</h3>
 
-      <a href="/portfolio/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/portfolio.svg" alt="This portfolio website" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>This Portfolio Site</h3>
-          <p class="project-subheading">15-113 Project 1</p>
-        </div>
-      </a>
+      <p>The camera is a fixed-angle orthographic camera that only translates as you advance, which is what gives Crossy Road its signature toy-diorama look. Everything is built from simple boxes and primitives with flat lighting for a chunky voxel aesthetic, with a bit of fog on the horizon so distant lanes fade in rather than pop in.</p>
 
-      <a href="/project9/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/CrossyRoad.png" alt="Crossy Road remake gameplay screenshot" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Crossy Road Remake</h3>
-          <p class="project-subheading">15-113 Homework 2</p>
-        </div>
-      </a>
+      <h3>How It Is Built</h3>
+
+      <p>The game is dependency-free aside from Three.js, which is loaded from a CDN through an import map &mdash; no bundler, no build step. Gameplay logic is split across small modules for the player, procedural world generation, obstacles, powerups, input (keyboard, swipe, and an on-screen D-pad), synthesized WebAudio sound effects, and the score/HUD UI, all coordinated by a small game-loop state machine.</p>
+
+      <h3>Future Work</h3>
+
+      <p>Possible additions include more character skins, collectible coins for cosmetic unlocks, a proper &ldquo;left behind by the camera&rdquo; death state, real sound and music assets in place of the synthesized beeps, and more powerup types.</p>
 
     </div>
 

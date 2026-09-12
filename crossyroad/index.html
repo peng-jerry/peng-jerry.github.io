@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Crossy Road Remake</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <a id="back-link" href="/project9/">&larr; Portfolio</a>
+  <canvas id="game-canvas"></canvas>
+
+  <div id="hud" class="hidden">
+    <div id="score">0</div>
+    <div id="powerup-row"></div>
+  </div>
+
+  <div id="start-screen" class="overlay">
+    <div class="panel">
+      <h1>CROSSY ROAD<br /><span class="subtitle">remake</span></h1>
+      <p>Hop across roads, rivers &amp; rail lines.<br />Get as far as you can!</p>
+      <p class="best">Best: <span id="start-best">0</span></p>
+      <p class="hint">Tap to play &middot; Arrows / WASD / Swipe</p>
+    </div>
+  </div>
+
+  <div id="gameover-screen" class="overlay hidden">
+    <div class="panel">
+      <h1>GAME OVER</h1>
+      <p class="score-line">Score: <span id="final-score">0</span></p>
+      <p class="best">Best: <span id="final-best">0</span></p>
+      <button id="restart-button">Play Again</button>
+    </div>
+  </div>
+
+  <div id="touch-controls">
+    <button id="btn-up" class="dpad-btn dpad-up" aria-label="Move forward">&#9650;</button>
+    <div class="dpad-row">
+      <button id="btn-left" class="dpad-btn dpad-left" aria-label="Move left">&#9664;</button>
+      <button id="btn-down" class="dpad-btn dpad-down" aria-label="Move back">&#9660;</button>
+      <button id="btn-right" class="dpad-btn dpad-right" aria-label="Move right">&#9654;</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
