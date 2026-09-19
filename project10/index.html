@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="/css/style.css">
 <script>/* Apply the saved theme before first paint so the page never flashes. */
 (function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();</script>
-<title>Projects &middot; Jerry Peng</title>
-<meta name="description" content="Mechanical design, controls, mechatronics, and simulation projects by Jerry Peng.">
+<title>Trivia Game Show &middot; Jerry Peng</title>
+<meta name="description" content="A Who Wants to Be a Millionaire-style desktop trivia game built with Python, CustomTkinter, and the Open Trivia Database API.">
 </head>
 <body>
 
@@ -42,108 +42,59 @@
 <main id="main">
   <div class="container">
 
-    <h1 class="page-title">Projects</h1>
+    <a class="back-link" href="/projects.html">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      All projects
+    </a>
+
+    <h1 class="page-title">Trivia Game Show</h1>
     <div class="title-rule"></div>
 
-    <div class="projects-grid">
+    <div class="prose">
 
-      <div class="section-divider">
-        <span>Mechanical Design &amp; Simulation Projects</span>
+      <div class="project-meta">
+        <p class="meta-org">15-113</p>
+        <p class="meta-date">HW 3</p>
+        <p class="meta-skills">Skills: Python, CustomTkinter, REST APIs, Multithreading</p>
       </div>
 
-      <a href="/project1/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/ORD.png" alt="Optimized Rotary Design clutch components" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Optimized Rotary Design</h3>
-          <p class="project-subheading">ESTAT Actuation (January - August 2024)</p>
-        </div>
-      </a>
+      <p>A desktop trivia game in the style of <em>Who Wants to Be a Millionaire</em>, built with Python and the Open Trivia Database API. Questions get progressively harder as you advance: the first third of a game is easy, the middle third is medium, and the last third is hard, with a growing prize ladder to match.</p>
 
-      <!-- The LEET write-up lives at /project2/ but is deliberately not shown here. -->
-
-      <a href="/project4/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/Printer.png" alt="Core-shell 3-D printer nozzle and syringe pump system" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Core-Shell 3-D Printer</h3>
-          <p class="project-subheading">Bajaj Research Lab (August 2024 - May 2025)</p>
-        </div>
-      </a>
-
-      <div class="section-divider">
-        <span>Controls Projects</span>
+      <div class="game-embed">
+        <a class="btn btn-primary" href="https://github.com/peng-jerry/peng-jerry.github.io/tree/main/trivia-game" rel="noopener">
+          View Source on GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="hint">A desktop app, not a web page &mdash; clone it and run <code>python main.py</code> to play</p>
       </div>
 
-      <a href="/project6/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project6/BlueBoat.png" alt="BlueBoat unmanned surface vehicle" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Boat Project</h3>
-          <p class="project-subheading">Robomechanics Lab (August 2025 - Present)</p>
-        </div>
-      </a>
+      <figure>
+        <img src="/assets/project10/home-screen.png" alt="Trivia Game Show home screen with question-count and category settings" width="560" loading="lazy">
+        <figcaption>Home screen: pick how many questions and which category before starting</figcaption>
+      </figure>
 
-      <div class="section-divider">
-        <span>Mechatronics Projects</span>
-      </div>
+      <h3>Rising Difficulty &amp; the Prize Ladder</h3>
 
-      <a href="/project5/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/Launch.png" alt="Launch-a-Birdie badminton launcher CAD assembly" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Launch-a-Birdie</h3>
-          <p class="project-subheading">24-671 EMSD (August - December 2025)</p>
-        </div>
-      </a>
+      <p>Each question is worth more than the last, roughly &times;1.6 per step, the same shape as the real show&rsquo;s ladder. Reaching the end of the easy tier and the end of the medium tier &ldquo;banks&rdquo; a safe haven: if a later question is missed, the game ends with the last banked prize instead of nothing, just like the show&rsquo;s guaranteed checkpoints. A 50:50 lifeline is available once per game to remove two of the three wrong answers.</p>
 
-      <div class="section-divider">
-        <span>Miscellaneous Projects</span>
-      </div>
+      <figure>
+        <img src="/assets/project10/gameplay.png" alt="A trivia question in progress, showing the category, difficulty badge, prize ladder, and four answer choices" width="560" loading="lazy">
+        <figcaption>Each question shows its category, a color-coded difficulty badge, and the current/banked prize</figcaption>
+      </figure>
 
-      <a href="/project3/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/Joule.png" alt="In-process monitoring plot of a Joule anneal" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Joule Anneal Automation</h3>
-          <p class="project-subheading">MEMS Senior Design (August-December 2024)</p>
-        </div>
-      </a>
+      <h3>Calling the Open Trivia Database</h3>
 
-      <a href="/portfolio/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/portfolio.svg" alt="This portfolio website" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>This Portfolio Site</h3>
-          <p class="project-subheading">15-113 Project 1</p>
-        </div>
-      </a>
+      <p>Questions come from the <a href="https://opentdb.com/api_config.php" rel="noopener">Open Trivia Database</a>, a free, keyless REST API &mdash; no account or credentials needed. The app fetches multiple-choice questions one difficulty tier at a time via the <code>requests</code> library, along with a session token so the API avoids repeating a question already seen that game. Fetching runs on a background thread so the interface stays responsive while it waits on the network.</p>
 
-      <a href="/project9/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/CrossyRoad.png" alt="Crossy Road remake gameplay screenshot" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Crossy Road Remake</h3>
-          <p class="project-subheading">15-113 Homework 2</p>
-        </div>
-      </a>
+      <p>Building this also meant working around two real API quirks caught while testing against the live service rather than just its docs: OpenTDB now rate-limits with a plain HTTP 429 in addition to its documented JSON <code>response_code</code>, and its <code>encoding</code> parameter no longer changes the response format, so the app decodes the default HTML-entity-escaped text with Python&rsquo;s <code>html.unescape</code> instead.</p>
 
-      <a href="/project10/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/TriviaGameShow.png" alt="Trivia Game Show question screen with category and difficulty badge" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Trivia Game Show</h3>
-          <p class="project-subheading">15-113 HW 3</p>
-        </div>
-      </a>
+      <h3>Interface</h3>
+
+      <p>The UI is built with <a href="https://github.com/TomSchimansky/CustomTkinter" rel="noopener">CustomTkinter</a> on top of Python&rsquo;s standard Tkinter, in a dark-blue, gold-accented game-show palette. A high score is kept locally between runs.</p>
+
+      <h3>Future Work</h3>
+
+      <p>Possible additions include a full visual prize-ladder sidebar, an Ask-the-Audience lifeline, and a difficulty-select override for players who want to skip straight to the hard tier.</p>
 
     </div>
 
