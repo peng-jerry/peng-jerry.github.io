@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="/css/style.css">
 <script>/* Apply the saved theme before first paint so the page never flashes. */
 (function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();</script>
-<title>Projects &middot; Jerry Peng</title>
-<meta name="description" content="Mechanical design, controls, mechatronics, and simulation projects by Jerry Peng.">
+<title>PDF Combiner &middot; Jerry Peng</title>
+<meta name="description" content="A Flask + JavaScript PDF combiner: a Render-hosted backend merges PDFs uploaded from this reorderable frontend.">
 </head>
 <body>
 
@@ -42,118 +42,51 @@
 <main id="main">
   <div class="container">
 
-    <h1 class="page-title">Projects</h1>
+    <a class="back-link" href="/projects.html">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      All projects
+    </a>
+
+    <h1 class="page-title">PDF Combiner</h1>
     <div class="title-rule"></div>
 
-    <div class="projects-grid">
+    <div class="prose">
 
-      <div class="section-divider">
-        <span>Mechanical Design &amp; Simulation Projects</span>
+      <div class="project-meta">
+        <p class="meta-org">15-113</p>
+        <p class="meta-date">HW 4</p>
+        <p class="meta-skills">Skills: Python, Flask, REST APIs, CORS, JavaScript, Render &amp; GitHub Pages deployment</p>
       </div>
 
-      <a href="/project1/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/ORD.png" alt="Optimized Rotary Design clutch components" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Optimized Rotary Design</h3>
-          <p class="project-subheading">ESTAT Actuation (January - August 2024)</p>
-        </div>
-      </a>
+      <p>A two-part &ldquo;backend + frontend&rdquo; assignment: upload several PDFs, drag them into the order you want, and get back one merged file. The frontend here only handles the UI &mdash; every byte of PDF processing happens on a separate Flask API hosted on Render.</p>
 
-      <!-- The LEET write-up lives at /project2/ but is deliberately not shown here. -->
-
-      <a href="/project4/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/Printer.png" alt="Core-shell 3-D printer nozzle and syringe pump system" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Core-Shell 3-D Printer</h3>
-          <p class="project-subheading">Bajaj Research Lab (August 2024 - May 2025)</p>
-        </div>
-      </a>
-
-      <div class="section-divider">
-        <span>Controls Projects</span>
+      <div class="game-embed">
+        <a class="btn btn-primary" href="/pdf-combiner/">
+          Open the PDF Combiner
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="hint">Select 2+ PDFs, reorder them, and download the combined result &mdash; nothing is stored server-side</p>
       </div>
 
-      <a href="/project6/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project6/BlueBoat.png" alt="BlueBoat unmanned surface vehicle" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Boat Project</h3>
-          <p class="project-subheading">Robomechanics Lab (August 2025 - Present)</p>
-        </div>
-      </a>
+      <h3>Two Separately Deployed Halves</h3>
 
-      <div class="section-divider">
-        <span>Mechatronics Projects</span>
-      </div>
+      <p>The frontend is a dependency-free HTML/CSS/JavaScript page (the copy embedded above lives right in this site&rsquo;s repo). The backend is a Flask API, merging PDFs with the <code>pypdf</code> library and served in production by Gunicorn, deployed separately on <a href="https://render.com/" rel="noopener">Render</a>. They only ever talk to each other over the network &mdash; the frontend never imports or calls the backend&rsquo;s code directly, which is the actual point of the assignment: practicing a real client/server split instead of one monolithic app.</p>
 
-      <a href="/project5/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/Launch.png" alt="Launch-a-Birdie badminton launcher CAD assembly" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Launch-a-Birdie</h3>
-          <p class="project-subheading">24-671 EMSD (August - December 2025)</p>
-        </div>
-      </a>
+      <h3>How a Combine Request Works</h3>
 
-      <div class="section-divider">
-        <span>Miscellaneous Projects</span>
-      </div>
+      <p>Selected files are collected into a JavaScript array in the order the user arranges them, packed into a <code>FormData</code> object (each file appended under the same field name, <code>files</code>), and sent with <code>fetch()</code> as a <code>multipart/form-data</code> POST to <code>/api/combine</code>. On the backend, Flask reads that file list in the same order, validates every file (extension, magic bytes, that <code>pypdf</code> can actually parse it, size limits) before merging any of them, then walks through each validated PDF in order appending its pages to a single output with <code>pypdf.PdfWriter</code>. The response&rsquo;s body is the merged PDF itself, not JSON, so the frontend reads it as a <code>Blob</code> and turns that into a download link with <code>URL.createObjectURL()</code>.</p>
 
-      <a href="/project3/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/Joule.png" alt="In-process monitoring plot of a Joule anneal" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Joule Anneal Automation</h3>
-          <p class="project-subheading">MEMS Senior Design (August-December 2024)</p>
-        </div>
-      </a>
+      <h3>CORS, and a Bug It Actually Caught</h3>
 
-      <a href="/portfolio/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/portfolio.svg" alt="This portfolio website" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>This Portfolio Site</h3>
-          <p class="project-subheading">15-113 Project 1</p>
-        </div>
-      </a>
+      <p>Since this frontend and the Render backend live on different origins, the backend has to explicitly allow this site&rsquo;s origin via CORS &mdash; restricted to a specific origin list rather than a wildcard, so the API can&rsquo;t be silently called from just anywhere. Setting that up caught a real, easy-to-miss bug: the allowed-origin environment variable on Render was originally entered with a trailing slash (<code>https://peng-jerry.github.io/</code>), which never matches the <code>Origin</code> header a browser actually sends (no trailing slash) &mdash; every request would have failed CORS silently, looking exactly like the backend was down. Fixed by removing the slash and re-verifying with a real cross-origin request before calling it done.</p>
 
-      <a href="/project9/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/CrossyRoad.png" alt="Crossy Road remake gameplay screenshot" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Crossy Road Remake</h3>
-          <p class="project-subheading">15-113 Homework 2</p>
-        </div>
-      </a>
+      <h3>Validation, Twice</h3>
 
-      <a href="/project10/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/TriviaGameShow.png" alt="Trivia Game Show question screen with category and difficulty badge" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Trivia Game Show</h3>
-          <p class="project-subheading">15-113 HW 3</p>
-        </div>
-      </a>
+      <p>The frontend does a quick sanity check (file extension) purely for immediate feedback &mdash; so a user isn&rsquo;t left guessing why a request failed 10 seconds later. The backend never trusts that check: it independently verifies every file&rsquo;s magic bytes and actually parses it with <code>pypdf</code>, rejects anything corrupted, password-protected, or oversized, and only merges if every single file passes. Client-side validation is a UX nicety here, not a security boundary.</p>
 
-      <a href="/project11/" class="project-card">
-        <div class="project-image">
-          <img src="/assets/project_cards/PDFCombiner.png" alt="PDF Combiner file list with reorder and remove controls" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>PDF Combiner</h3>
-          <p class="project-subheading">15-113 HW 4</p>
-        </div>
-      </a>
+      <h3>Source</h3>
+
+      <p>Both halves are in <a href="https://github.com/peng-jerry/PDF_combiner" rel="noopener">github.com/peng-jerry/PDF_combiner</a>, with a README on each side covering local setup, deployment, and the API contract in more depth.</p>
 
     </div>
 

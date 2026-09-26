@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Combiner &middot; Jerry Peng</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <a class="back-home" href="/project11/">&larr; Portfolio</a>
+
+  <header class="page-header">
+    <h1>PDF Combiner</h1>
+    <p class="subtitle">Select two or more PDF files, arrange them in the order you want, and download one merged PDF. All of the actual merging happens on the backend server, not in your browser.</p>
+  </header>
+
+  <main class="card">
+
+    <div id="dropzone" class="dropzone">
+      <p class="dropzone-text"><strong>Drag &amp; drop PDF files here</strong></p>
+      <p class="dropzone-or">or</p>
+      <button id="browse-btn" type="button" class="btn btn-secondary">Choose Files</button>
+      <input id="file-input" type="file" accept="application/pdf,.pdf" multiple hidden>
+    </div>
+
+    <div id="validation-message" class="message message-warning" hidden></div>
+
+    <section id="file-list-section" class="file-list-section" hidden>
+      <h2>Selected Files (<span id="file-count">0</span>)</h2>
+      <p class="hint">Use the arrows to set the merge order &mdash; page 1 of the combined PDF will come from the file at the top.</p>
+      <ul id="file-list" class="file-list"></ul>
+    </section>
+
+    <button id="combine-btn" class="btn btn-primary btn-large" disabled>Combine PDFs</button>
+
+    <div id="loading" class="loading" hidden>
+      <span class="spinner" aria-hidden="true"></span>
+      <span>Combining your PDFs&hellip;</span>
+    </div>
+
+    <div id="error-area" class="message message-error" hidden></div>
+
+    <div id="success-area" class="message message-success" hidden>
+      <p>Your combined PDF is ready.</p>
+      <a id="download-link" class="btn btn-primary" download="combined.pdf">Download combined.pdf</a>
+    </div>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>Backend: <code id="backend-url-display"></code></p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
