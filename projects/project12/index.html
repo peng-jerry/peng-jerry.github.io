@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="/css/style.css">
 <script>/* Apply the saved theme before first paint so the page never flashes. */
 (function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();</script>
-<title>Development of a Core-Shell-Shell 3-D Printer &middot; Jerry Peng</title>
-<meta name="description" content="Designing a nozzle and syringe pump system for a core-shell-shell 3-D printer used to manufacture dielectric elastomers.">
+<title>Noteable &middot; Jerry Peng</title>
+<meta name="description" content="Noteable: a full-stack Markdown note-taking app with accounts, nested folders and autosave. React frontend, Flask API on Render, PostgreSQL on Neon.">
 </head>
 <body>
 
@@ -47,57 +47,54 @@
       All projects
     </a>
 
-    <h1 class="page-title">Development of a Core-Shell-Shell 3-D Printer for the Manufacturing of Dielectric Elastomers</h1>
+    <h1 class="page-title">Noteable</h1>
     <div class="title-rule"></div>
 
     <div class="prose">
 
       <div class="project-meta">
-        <p class="meta-org">Bajaj Lab</p>
-        <p class="meta-date">August 2024 - May 2025</p>
-        <p class="meta-skills">Skills: Solidworks, COMSOL, Motor Control, SLA 3-D Printing</p>
+        <p class="meta-org">15-113</p>
+        <p class="meta-date">HW 5</p>
+        <p class="meta-skills">Skills: React, Vite, Python, Flask, SQLAlchemy, PostgreSQL, JWT authentication, REST API design, testing, Render, Neon &amp; GitHub Pages deployment</p>
       </div>
 
-      <h3>Design Motivation</h3>
+      <p>A full-stack note-taking app: sign up, write notes in Markdown with a live preview, and organise them into folders inside folders. Every account&rsquo;s notes are private to it, everything saves automatically as you type, and the layout adapts from a three-pane desktop view down to a phone.</p>
 
-      <p>3-D printing has changed modern manufacturing by enabling the rapid prototyping of components that would be difficult to create using traditional subtractive methods. An important component of 3-D printing is the filament choice, which determines the material properties that the resulting print is made of. However, another way to use the filament is to combine multiple filaments together in a core-shell cross-sectional structure, resulting in a material that can have unique properties compared to single material filaments.</p>
+      <div class="game-embed">
+        <a class="btn btn-primary" href="/projects/noteable/">
+          Open Noteable
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="hint">Create a free account to try it &mdash; the first request after a quiet spell can take up to a minute while the free-tier server wakes up</p>
+      </div>
 
-      <p>As a part of my time in the Bajaj Lab at the University of Pittsburgh, I designed a nozzle and syringe pump system for a 3-D Printer which would be used to manufacture Core-Shell-Shell filaments for the purpose of making dielectric elastomers. These utilize a conductive ionic core and outer shell, and a dielectric center shell to allow the filament to bend or elongate when an electrical current is run through the filament.</p>
+      <h3>Three Deployed Pieces</h3>
 
-      <figure>
-        <div class="figure-pair">
-          <img src="/assets/project4/bend.png" alt="Dielectric elastomer actuator bending" width="300" loading="lazy">
-          <img src="/assets/project4/elongate.png" alt="Dielectric elastomer actuator elongating" width="300" loading="lazy">
-        </div>
-        <figcaption>Taken from &ldquo;Fiber-Format Dielectric Elastomer Actuators by the Meter&rdquo; (<a href="https://doi.org/10.1002/adfm.202314056" rel="noopener">https://doi.org/10.1002/adfm.202314056</a>)</figcaption>
-      </figure>
+      <p>The frontend is a React single-page app built with Vite, and the built copy is served straight from this site at <code>/noteable/</code>. It talks to a Flask REST API hosted on <a href="https://render.com/" rel="noopener">Render</a>, which stores everything in a PostgreSQL database on <a href="https://neon.tech/" rel="noopener">Neon</a>. Database migrations (Alembic) run automatically on every deploy. The app uses hash URLs (<code>/noteable/#/notes/&hellip;</code>) on purpose: GitHub Pages only knows this site&rsquo;s own 404 page, so ordinary deep links would break as soon as someone refreshed.</p>
 
-      <h3>Nozzle Design &amp; COMSOL Simulation</h3>
+      <h3>Accounts and Private Routes</h3>
 
-      <p>First, I created a basic nozzle design that would act as a preliminary prototype. This was designed in Solidworks with the goal of being easily adjustable to help validate fluid flow.</p>
+      <p>Logging in returns a short-lived access token and a longer-lived refresh token. When an access token expires, the frontend quietly swaps the refresh token for a new one and retries the request; if several requests expire at once, they share a single refresh. Logging out revokes both tokens on the server, and changing your password invalidates every older session. On the frontend, routes are split into public (the landing page), public-only (login and register) and private (your notes and settings). Visiting a private page while logged out sends you to the login page, then back to where you were going. On the backend, every query is scoped to the signed-in user, and someone else&rsquo;s note returns the same 404 as a note that doesn&rsquo;t exist, so IDs can&rsquo;t be probed.</p>
 
-      <figure>
-        <img src="/assets/project4/nozzle.png" alt="Solidworks nozzle design" width="600" loading="lazy">
-      </figure>
+      <h3>Folders Inside Folders</h3>
 
-      <p>Next, we needed to ensure that the fluid flow was laminar as it exited the nozzle. I utilized COMSOL, which generated Reynolds numbers for all 3 fluids. This allowed us to validate that the liquids would not be turbulent as they exited the nozzle.</p>
+      <p>Folders form a tree through a single <code>parent_id</code> column. The API rejects moves that would put a folder inside itself or one of its own subfolders, caps nesting at ten levels, and keeps sibling names unique. Deleting a folder cascades to everything inside it, and the confirmation dialog tells you exactly how many subfolders and notes will go with it before you commit.</p>
 
-      <figure>
-        <img src="/assets/project4/COMSOL.png" alt="COMSOL simulation of flow through the nozzle" width="400" loading="lazy">
-      </figure>
+      <h3>Autosave Without Lost Edits</h3>
 
-      <p>From the simulation, the maximum Reynolds number generated was ~100, way lower than the 2000 threshold required to be laminar.</p>
+      <p>There&rsquo;s no save button. Edits are sent about a second after you stop typing, and only the fields that changed are sent. Saves never overlap: anything typed while one is in flight is merged and sent next, so they can&rsquo;t arrive out of order and overwrite newer text with older text. A failed save keeps your changes and offers a retry, switching notes saves whatever is pending first, and the browser warns you before closing a tab with unsaved work.</p>
 
-      <h3>Syringe Pumps &amp; Conclusion</h3>
+      <h3>Built to Grow</h3>
 
-      <p>Lastly, since each fluid occupies a different cross-sectional area within the nozzle, matching their exit velocities requires introducing each fluid at a different volumetric flow rate. To achieve this, I built three independent syringe pumps using Luer lock syringes, each capable of driving a unique flow rate so that all three fluids would exit the nozzle at the same velocity.</p>
+      <p>Noteable is meant to be the first piece of a larger site, so the backend isn&rsquo;t notes-specific at its core. Every feature is its own Flask blueprint under a versioned <code>/api/v1</code> prefix, user accounts are shared rather than tied to notes, and every error &mdash; validation, authentication, database outages &mdash; comes back in the same JSON shape with a stable error code. Adding a new section later means adding a package, not rewriting this one.</p>
 
-      <figure>
-        <img src="/assets/project4/syringes.png" alt="Three independently controlled syringe pumps" width="750" loading="lazy">
-        <figcaption>3 independent controlled stepper motors allow each fluid to be pumped at a different rate.</figcaption>
-      </figure>
+      <h3>Testing, and the Bugs It Caught</h3>
 
-      <p>This project established a foundation for future use to produce core-shell-shell filaments. The COMSOL simulations and prototype syringe pump testing demonstrates the viability of the project while leaving room for future improvements and design changes. Overall, this has been by far my most open-ended project. It gave me insights into the research process, as well as learning to be independent and generating next steps.</p>
+      <p>The backend has 39 pytest tests, run against both SQLite and a real PostgreSQL server, and the frontend has 32 Vitest tests. On top of that, a scripted headless-browser run clicks through the whole app against the real API at desktop, tablet and phone sizes. That run caught bugs the unit tests couldn&rsquo;t: deleting the folder you were viewing left the app stuck on a folder that no longer existed, and the search box trimmed spaces while you were still typing. Deployment caught two more. Render had been running its default start command instead of the project&rsquo;s, and the service URL turned out not to be the one the frontend expected &mdash; the default name was already taken by someone else&rsquo;s service. Checking that the health endpoint reported <em>this</em> API (and a working database) before building is what caught it.</p>
+
+      <h3>Source</h3>
+
+      <p>Both halves are in <a href="https://github.com/peng-jerry/Noteable" rel="noopener">github.com/peng-jerry/Noteable</a>, with a README covering local setup, the full API reference, deployment, and how to extend the backend.</p>
 
     </div>
 

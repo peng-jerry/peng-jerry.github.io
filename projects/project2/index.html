@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="/css/style.css">
 <script>/* Apply the saved theme before first paint so the page never flashes. */
 (function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();</script>
-<title>Launch-a-Birdie &middot; Jerry Peng</title>
-<meta name="description" content="A low-cost robotic badminton launcher built for 24-671 Electro-mechanical Systems Design.">
+<title>Lightweight Electroadhesive Exo Tendon (LEET) System &middot; Jerry Peng</title>
+<meta name="description" content="An exotendon-based support system designed to counterbalance helmet-induced loads and reduce chronic neck injury.">
 </head>
 <body>
 
@@ -47,85 +47,40 @@
       All projects
     </a>
 
-    <h1 class="page-title">Launch-a-Birdie</h1>
+    <h1 class="page-title">Lightweight Electroadhesive Exo Tendon (LEET) System</h1>
     <div class="title-rule"></div>
 
     <div class="prose">
 
       <div class="project-meta">
-        <p class="meta-org">24-671 Electro-mechanical Systems Design</p>
-        <p class="meta-date">August - December 2025</p>
-        <p class="meta-skills">Skills: CAD, Rapid Prototyping, Mechatronics, Motor Control &amp; Arduino, C, Soldering</p>
+        <p class="meta-org">ESTAT Actuation</p>
+        <p class="meta-date">April - August 2024</p>
+        <p class="meta-skills">Skills: CAD(Solidworks), DFM, DFA, Tolerance Analysis, Rapid Prototyping</p>
       </div>
 
-      <h3>Problem Definition</h3>
-
-      <p>Badminton players need to practice many skills to improve their performance at the game. However, some drills require the shots to be practiced at high volume and high consistency in order to get a meaningful practice session. In most cases, these conditions cannot be provided by other players as they cannot hit the birdie consistently and continuously for the volume necessary for these practice drills.</p>
-
-      <p>Through the Launch-a-Birdie project, we set out to design a low-cost robotic launcher that could help these players achieve these results.</p>
-
-      <h3>Mechanical Design</h3>
-
-      <p>We broke the system into four subsystems &mdash; storage, feeding, aiming, and launching &mdash; and worked through structured concept generation, and CAD development for each. We landed on a rotating base for aiming, a star-wheeled feeding system, dual flywheels for launching, a simple tube for storage, and a touchscreen to perform different shot types.</p>
+      <p>An important project I worked on while at ESTAT Actuation was the Lightweight Electroadhesive Exo-Tendon (LEET) System. The goal of the project was to design an exotendon-based support system to counterbalance helmet-induced loads and reduce chronic neck injury. The system would integrate seamlessly with the existing flight equipment while preserving comfort and safety in various flight conditions.</p>
 
       <figure>
-        <img src="/assets/project_cards/Launch.png" alt="Full CAD assembly of the Launch-a-Birdie launcher" loading="lazy">
-        <figcaption>Full CAD Assembly of our design</figcaption>
+        <img src="/projects/assets/project2/Headgear.png" alt="Diagram of headgear loading on the neck" width="750" loading="lazy">
+        <figcaption>Headgear exerts an extra torque in the neck muscles, resulting in increased fatigue</figcaption>
       </figure>
 
-      <h3>Electrical Design</h3>
+      <p>My primary responsibilities were designing components to ensure manufacturability, providing proper power distribution to all electrical components, and ensuring overall housing assemblability.</p>
 
-      <p>Once that was completed, I primarily worked on the electrical wiring and code work for our motors to ensure our design worked. This included testing of the motors, power distribution, and programming of the motors.</p>
+      <p>A big challenge for our design was ensuring that our electrical circuitry was able to pass Electrostatic Discharge Testing (ESD), (ensuring that our device doesn&rsquo;t create sparks and catch on fire), and not losing power even in rough flight conditions.</p>
+
+      <p>A big innovation I made was to use pogo pins to help provide power. These are spring loaded connectors that provide consistent pressure and good contact quality, while allowing room for vertical error. In comparison to wires, they were much better at dealing with turbulence as well as eliminating the risk of generating a spark. This proved vital in creating a design that was both compact and reliable.</p>
 
       <figure>
-        <img src="/assets/project5/Wiring.png" alt="Wiring diagram for the launcher" loading="lazy">
-        <img src="/assets/project5/Arduino.png" alt="Arduino pinout diagram" loading="lazy">
-        <figcaption>Pinout diagram for the Arduino as well as graphics to demonstrate power &amp; control distribution</figcaption>
+        <img src="/projects/assets/project2/Pogo.png" alt="Pogo pin connector design" width="750" loading="lazy">
+        <figcaption>Pogo Pin design</figcaption>
       </figure>
 
-      <p>This was my first hands-on experience designing a full electrical system from scratch. It involved considering power budgeting, signal integrity, and failure points across a system with seven motors and multiple voltage levels. Working with ESCs and brushless motors gave me a much deeper understanding of how motor control signals translate to real mechanical output.</p>
-
-      <p>As well, a challenge we faced was utilizing breadboards versus circuit boards. On one hand, breadboards made changing circuits and wires easy, but increased overall complexity as you had to ensure every wire was correctly placed. They also had a tendency to come loose which would be a pain to place back in the correct location. On the other hand, when we used circuit boards, our soldering was sometimes imperfect, and if we had to make a change it required a lot of effort to correct. If I had to do this project over again, I would work to design a custom PCB, or buy an off-the-shelf component rather than soldering my own or using breadboards.</p>
-
-      <h3>Validation &amp; Results</h3>
-
-      <p>We then validated our launcher by performing reliability, range and accuracy tests. These demonstrated the efficacy of our design and how we hit performance targets.</p>
+      <p>Overall, the LEET was one of the most complex systems I have ever worked on. It helped me to gain an appreciation of what it means to understand every little detail when designing. I developed a much better understanding of manufacturing techniques, the importance of constant design iteration and how to utilize rapid prototyping to produce a good product. This project not only improved my technical skills but also taught me how to think more critically, adapt to challenges, and refine ideas through repeated testing and feedback.</p>
 
       <figure>
-        <div class="figure-pair">
-          <img src="/assets/project5/Landing.png" alt="Landing accuracy test results" width="400" loading="lazy">
-          <div class="video portrait">
-            <iframe src="https://www.youtube.com/embed/uIVPQudsb98?mute=1"
-              title="YouTube Shorts player"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-      </figure>
-
-      <p>Overall, I was very satisfied with how our design turned out. Launch-a-birdie allowed us to take a concept, generate design specifications, manufacture prototypes and turn it into a working electromechanical system. Through the project, I gained many technical skills in mechatronics and also invaluable experience in working on a team.</p>
-
-      <figure>
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/OOZ5I-UKoXw?mute=1"
-            title="Launch-a-Birdie"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
-        <figcaption>Demonstration of using the touchscreen to change between shot types</figcaption>
-      </figure>
-
-      <figure>
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/mdqb5lIQJjg?mute=1"
-            title="Launch-a-Birdie"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
-        <figcaption>A final video of me rallying with the launcher!</figcaption>
+        <img src="/projects/assets/project2/LEET.png" alt="Overall LEET system assembly" width="750" loading="lazy">
+        <figcaption>Overall LEET Assembly</figcaption>
       </figure>
 
     </div>

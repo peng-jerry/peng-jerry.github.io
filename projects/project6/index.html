@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="/css/style.css">
 <script>/* Apply the saved theme before first paint so the page never flashes. */
 (function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();</script>
-<title>Projects &middot; Jerry Peng</title>
-<meta name="description" content="Mechanical design, controls, mechatronics, and simulation projects by Jerry Peng.">
+<title>Autonomous Control for Unmanned Surface Vehicles (USVs) &middot; Jerry Peng</title>
+<meta name="description" content="Developing an MPPI controller and Unreal Engine 5 simulator for unmanned surface vehicles at the Robomechanics Lab.">
 </head>
 <body>
 
@@ -42,128 +42,54 @@
 <main id="main">
   <div class="container">
 
-    <h1 class="page-title">Projects</h1>
+    <a class="back-link" href="/projects.html">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      All projects
+    </a>
+
+    <h1 class="page-title">Autonomous Control for Unmanned Surface Vehicles (USVs)</h1>
     <div class="title-rule"></div>
 
-    <div class="projects-grid">
+    <div class="prose">
 
-      <div class="section-divider">
-        <span>Mechanical Design &amp; Simulation Projects</span>
+      <div class="project-meta">
+        <p class="meta-org">Robomechanics Lab</p>
+        <p class="meta-date">August 2025 - Present</p>
+        <p class="meta-skills">Skills: Python, Unreal Engine 5, MPPI &amp; Optimal Control</p>
       </div>
 
-      <a href="/projects/project1/" class="project-card">
-        <div class="project-image">
-          <img src="/projects/assets/project_cards/ORD.png" alt="Optimized Rotary Design clutch components" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Optimized Rotary Design</h3>
-          <p class="project-subheading">ESTAT Actuation (January - August 2024)</p>
-        </div>
-      </a>
+      <p>Unmanned Surface Vehicles (USVs) are vital for performing maritime tasks without the need for a human crew. Autonomous operation allows USVs to perform tasks in hazardous or hard-to-reach areas, reducing risks to human life.</p>
 
-      <!-- The LEET write-up lives at /project2/ but is deliberately not shown here. -->
+      <p>However, designing USVs presents several challenges. Most notably, boat and water dynamics are often uncertain and too complex to model accurately, and while long-horizon control strategies exist, they are typically not well suited to handle sudden disturbances or changes in direction.</p>
 
-      <a href="/projects/project4/" class="project-card">
-        <div class="project-image">
-          <img src="/projects/assets/project_cards/Printer.png" alt="Core-shell 3-D printer nozzle and syringe pump system" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Core-Shell 3-D Printer</h3>
-          <p class="project-subheading">Bajaj Research Lab (August 2024 - May 2025)</p>
-        </div>
-      </a>
+      <p>As a part of Robomechanics Lab, I have been working to develop a controller to devise optimal steering configurations for unmanned surface vessels (USVs) in difficult maritime situations.</p>
 
-      <div class="section-divider">
-        <span>Controls Projects</span>
-      </div>
+      <p>In order to validate our results we must choose a controller and create a simulator to validate our choice.</p>
 
-      <a href="/projects/project6/" class="project-card">
-        <div class="project-image">
-          <img src="/projects/assets/project6/BlueBoat.png" alt="BlueBoat unmanned surface vehicle" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Boat Project</h3>
-          <p class="project-subheading">Robomechanics Lab (August 2025 - Present)</p>
-        </div>
-      </a>
+      <h3>Optimal Control</h3>
 
-      <div class="section-divider">
-        <span>Mechatronics Projects</span>
-      </div>
+      <p>We found MPPI to be the best controller for our application. This was for a few main reasons: it was more easily tunable and had better disturbance rejection than other optimal control algorithms. As well, MPPI is not gradient-based, making it better at handling nonlinear dynamics. This means that we don&rsquo;t have to rely on our model to produce good steering configurations on an actual vessel.</p>
 
-      <a href="/projects/project5/" class="project-card">
-        <div class="project-image">
-          <img src="/projects/assets/project_cards/Launch.png" alt="Launch-a-Birdie badminton launcher CAD assembly" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Launch-a-Birdie</h3>
-          <p class="project-subheading">24-671 EMSD (August - December 2025)</p>
-        </div>
-      </a>
+      <figure>
+        <img src="/projects/assets/project_cards/mppi_sim.gif" alt="MPPI controller simulation" width="500" loading="lazy">
+      </figure>
 
-      <div class="section-divider">
-        <span>Miscellaneous Projects</span>
-      </div>
+      <h3>Simulator</h3>
 
-      <a href="/projects/project3/" class="project-card">
-        <div class="project-image">
-          <img src="/projects/assets/project_cards/Joule.png" alt="In-process monitoring plot of a Joule anneal" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Joule Anneal Automation</h3>
-          <p class="project-subheading">MEMS Senior Design (August-December 2024)</p>
-        </div>
-      </a>
+      <p>Next, we also needed to create a simulation environment to validate our control inputs. We chose Unreal Engine 5 as it had the best hydrodynamic modeling, easy integration of disturbance through waves, and gave us easy avenues for data collection.</p>
 
-      <a href="/projects/portfolio/" class="project-card">
-        <div class="project-image">
-          <img src="/projects/assets/project_cards/portfolio.svg" alt="This portfolio website" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>This Portfolio Site</h3>
-          <p class="project-subheading">15-113 Project 1</p>
-        </div>
-      </a>
+      <p>We used Open Sound Control to communicate between the simulator which allowed us to update controls in real time.</p>
 
-      <a href="/projects/project9/" class="project-card">
-        <div class="project-image">
-          <img src="/projects/assets/project_cards/CrossyRoad.png" alt="Crossy Road remake gameplay screenshot" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Crossy Road Remake</h3>
-          <p class="project-subheading">15-113 Homework 2</p>
-        </div>
-      </a>
+      <h3>Future Work</h3>
 
-      <a href="/projects/project10/" class="project-card">
-        <div class="project-image">
-          <img src="/projects/assets/project_cards/TriviaGameShow.png" alt="Trivia Game Show question screen with category and difficulty badge" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Trivia Game Show</h3>
-          <p class="project-subheading">15-113 HW 3</p>
-        </div>
-      </a>
+      <p>In the future, we hope to implement our controller into Unreal Engine 5 to show that it works and work towards testing &amp; validation on an actual boat.</p>
 
-      <a href="/projects/project11/" class="project-card">
-        <div class="project-image">
-          <img src="/projects/assets/project_cards/PDFCombiner.png" alt="PDF Combiner file list with reorder and remove controls" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>PDF Combiner</h3>
-          <p class="project-subheading">15-113 HW 4</p>
-        </div>
-      </a>
+      <p>Through these, we look to show that these are able to provide the level of control and precision that we need and are looking to implement it on a physical system in the upcoming semester.</p>
 
-      <a href="/projects/project12/" class="project-card">
-        <div class="project-image">
-          <img src="/projects/assets/project_cards/Noteable.png" alt="Noteable workspace with a folder tree, note list and a Markdown note in split editor and preview" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3>Noteable</h3>
-          <p class="project-subheading">15-113 HW 5</p>
-        </div>
-      </a>
+      <figure>
+        <img src="/projects/assets/project6/BlueBoat.png" alt="BlueBoat unmanned surface vehicle" width="500" loading="lazy">
+        <figcaption>BlueBoat, USV for Robotics to perform on-water validation</figcaption>
+      </figure>
 
     </div>
 

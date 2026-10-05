@@ -19,15 +19,22 @@ image path starts at the site root, so `file://` will not resolve them.)
 ## Layout
 
 ```
-index.html            Home
-projects.html         Projects grid
-resume.html           Resume
-project1/ … project8/ Project write-ups  (each is an index.html so the URL is /project1/)
-portfolio/            Write-up about this site
-css/style.css         All styling, including both colour themes
-js/site.js            Theme toggle + mobile nav (the only JavaScript on the site)
-assets/               Images, resume PDF/PNG
-.nojekyll             Tells GitHub Pages to serve these files as-is
+index.html              Home
+projects.html           Projects grid
+resume.html             Resume
+404.html                Not-found page; also redirects pre-move URLs (e.g. /project11/) into /projects/
+projects/
+  project1/ … project12/  Project write-ups (each is an index.html, so the URL is /projects/project1/)
+  portfolio/              Write-up about this site
+  crossyroad/             Crossy Road game (15-113 HW 2)
+  trivia-game/            Trivia Game Show source (15-113 HW 3; Python, not served as a page)
+  pdf-combiner/           PDF Combiner frontend (15-113 HW 4; backend on Render)
+  noteable/               Noteable build output (15-113 HW 5; source in peng-jerry/Noteable)
+  assets/                 Project images and project-card thumbnails
+css/style.css           All styling, including both colour themes
+js/site.js              Theme toggle + mobile nav
+assets/                 Profile photo, resume PDF/PNG
+.nojekyll               Tells GitHub Pages to serve these files as-is
 ```
 
 The navigation bar and footer are duplicated at the top and bottom of every page.

@@ -9,8 +9,22 @@
 <link rel="stylesheet" href="/css/style.css">
 <script>/* Apply the saved theme before first paint so the page never flashes. */
 (function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();</script>
-<title>Trivia Game Show &middot; Jerry Peng</title>
-<meta name="description" content="A Who Wants to Be a Millionaire-style desktop trivia game built with Python, CustomTkinter, and the Open Trivia Database API.">
+<title>Page not found &middot; Jerry Peng</title>
+<meta name="robots" content="noindex">
+<script>/* Projects moved under /projects/ (Oct 2026). Send old links to their new home,
+   keeping any ?query and #hash (Noteable's routes live in the hash). */
+(function(){
+  var path = location.pathname;
+  var moved = /^\/(project\d+|portfolio|crossyroad|pdf-combiner|trivia-game|noteable)(\/.*)?$/.exec(path)
+           || /^\/assets\/(project\d+|project_cards)(\/.*)?$/.exec(path);
+  var target = null;
+  if (moved) {
+    target = "/projects" + (path.indexOf("/assets/") === 0 ? "/assets/" + moved[1] : "/" + moved[1]) + (moved[2] || "/");
+  } else if (path === "/projects" || path === "/projects/") {
+    target = "/projects.html";
+  }
+  if (target) location.replace(target + location.search + location.hash);
+})();</script>
 </head>
 <body>
 
@@ -22,7 +36,7 @@
 
     <ul class="nav-links" id="nav-links">
       <li><a href="/">Home</a></li>
-      <li><a href="/projects.html" aria-current="page">Projects</a></li>
+      <li><a href="/projects.html">Projects</a></li>
       <li><a href="/resume.html">Resume</a></li>
     </ul>
 
@@ -42,60 +56,12 @@
 <main id="main">
   <div class="container">
 
-    <a class="back-link" href="/projects.html">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
-      All projects
-    </a>
-
-    <h1 class="page-title">Trivia Game Show</h1>
+    <h1 class="page-title">Page not found</h1>
     <div class="title-rule"></div>
 
     <div class="prose">
-
-      <div class="project-meta">
-        <p class="meta-org">15-113</p>
-        <p class="meta-date">HW 3</p>
-        <p class="meta-skills">Skills: Python, CustomTkinter, REST APIs, Multithreading</p>
-      </div>
-
-      <p>A desktop trivia game in the style of <em>Who Wants to Be a Millionaire</em>, built with Python and the Open Trivia Database API. Questions get progressively harder as you advance: the first third of a game is easy, the middle third is medium, and the last third is hard, with a growing prize ladder to match.</p>
-
-      <div class="game-embed">
-        <a class="btn btn-primary" href="https://github.com/peng-jerry/peng-jerry.github.io/tree/main/trivia-game" rel="noopener">
-          View Source on GitHub
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <p class="hint">A desktop app, not a web page &mdash; clone it and run <code>python main.py</code> to play</p>
-      </div>
-
-      <figure>
-        <img src="/assets/project10/home-screen.png" alt="Trivia Game Show home screen with question-count and category settings" width="560" loading="lazy">
-        <figcaption>Home screen: pick how many questions and which category before starting</figcaption>
-      </figure>
-
-      <h3>Rising Difficulty &amp; the Prize Ladder</h3>
-
-      <p>Each question is worth more than the last, roughly &times;1.6 per step, the same shape as the real show&rsquo;s ladder. Reaching the end of the easy tier and the end of the medium tier &ldquo;banks&rdquo; a safe haven: if a later question is missed, the game ends with the last banked prize instead of nothing, just like the show&rsquo;s guaranteed checkpoints. A 50:50 lifeline is available once per game to remove two of the three wrong answers.</p>
-
-      <figure>
-        <img src="/assets/project10/gameplay.png" alt="A trivia question in progress, showing the category, difficulty badge, prize ladder, and four answer choices" width="560" loading="lazy">
-        <figcaption>Each question shows its category, a color-coded difficulty badge, and the current/banked prize</figcaption>
-      </figure>
-
-      <h3>Calling the Open Trivia Database</h3>
-
-      <p>Questions come from the <a href="https://opentdb.com/api_config.php" rel="noopener">Open Trivia Database</a>, a free, keyless REST API &mdash; no account or credentials needed. The app fetches multiple-choice questions one difficulty tier at a time via the <code>requests</code> library, along with a session token so the API avoids repeating a question already seen that game. Fetching runs on a background thread so the interface stays responsive while it waits on the network.</p>
-
-      <p>Building this also meant working around two real API quirks caught while testing against the live service rather than just its docs: OpenTDB now rate-limits with a plain HTTP 429 in addition to its documented JSON <code>response_code</code>, and its <code>encoding</code> parameter no longer changes the response format, so the app decodes the default HTML-entity-escaped text with Python&rsquo;s <code>html.unescape</code> instead.</p>
-
-      <h3>Interface</h3>
-
-      <p>The UI is built with <a href="https://github.com/TomSchimansky/CustomTkinter" rel="noopener">CustomTkinter</a> on top of Python&rsquo;s standard Tkinter, in a dark-blue, gold-accented game-show palette. A high score is kept locally between runs.</p>
-
-      <h3>Future Work</h3>
-
-      <p>Possible additions include a full visual prize-ladder sidebar, an Ask-the-Audience lifeline, and a difficulty-select override for players who want to skip straight to the hard tier.</p>
-
+      <p>There&rsquo;s nothing at this address. If you followed an old link to a project, it may have moved &mdash; every project now lives on the <a href="/projects.html">Projects</a> page.</p>
+      <p><a class="btn btn-primary" href="/">Back to the home page</a></p>
     </div>
 
   </div>

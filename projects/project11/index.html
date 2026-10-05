@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="/css/style.css">
 <script>/* Apply the saved theme before first paint so the page never flashes. */
 (function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();</script>
-<title>Lightweight Electroadhesive Exo Tendon (LEET) System &middot; Jerry Peng</title>
-<meta name="description" content="An exotendon-based support system designed to counterbalance helmet-induced loads and reduce chronic neck injury.">
+<title>PDF Combiner &middot; Jerry Peng</title>
+<meta name="description" content="A Flask + JavaScript PDF combiner: a Render-hosted backend merges PDFs uploaded from this reorderable frontend.">
 </head>
 <body>
 
@@ -47,41 +47,46 @@
       All projects
     </a>
 
-    <h1 class="page-title">Lightweight Electroadhesive Exo Tendon (LEET) System</h1>
+    <h1 class="page-title">PDF Combiner</h1>
     <div class="title-rule"></div>
 
     <div class="prose">
 
       <div class="project-meta">
-        <p class="meta-org">ESTAT Actuation</p>
-        <p class="meta-date">April - August 2024</p>
-        <p class="meta-skills">Skills: CAD(Solidworks), DFM, DFA, Tolerance Analysis, Rapid Prototyping</p>
+        <p class="meta-org">15-113</p>
+        <p class="meta-date">HW 4</p>
+        <p class="meta-skills">Skills: Python, Flask, REST APIs, CORS, JavaScript, Render &amp; GitHub Pages deployment</p>
       </div>
 
-      <p>An important project I worked on while at ESTAT Actuation was the Lightweight Electroadhesive Exo-Tendon (LEET) System. The goal of the project was to design an exotendon-based support system to counterbalance helmet-induced loads and reduce chronic neck injury. The system would integrate seamlessly with the existing flight equipment while preserving comfort and safety in various flight conditions.</p>
+      <p>A two-part &ldquo;backend + frontend&rdquo; assignment: upload several PDFs, drag them into the order you want, and get back one merged file. The frontend here only handles the UI &mdash; every byte of PDF processing happens on a separate Flask API hosted on Render.</p>
 
-      <figure>
-        <img src="/assets/project2/Headgear.png" alt="Diagram of headgear loading on the neck" width="750" loading="lazy">
-        <figcaption>Headgear exerts an extra torque in the neck muscles, resulting in increased fatigue</figcaption>
-      </figure>
+      <div class="game-embed">
+        <a class="btn btn-primary" href="/projects/pdf-combiner/">
+          Open the PDF Combiner
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="hint">Select 2+ PDFs, reorder them, and download the combined result &mdash; nothing is stored server-side</p>
+      </div>
 
-      <p>My primary responsibilities were designing components to ensure manufacturability, providing proper power distribution to all electrical components, and ensuring overall housing assemblability.</p>
+      <h3>Two Separately Deployed Halves</h3>
 
-      <p>A big challenge for our design was ensuring that our electrical circuitry was able to pass Electrostatic Discharge Testing (ESD), (ensuring that our device doesn&rsquo;t create sparks and catch on fire), and not losing power even in rough flight conditions.</p>
+      <p>The frontend is a dependency-free HTML/CSS/JavaScript page (the copy embedded above lives right in this site&rsquo;s repo). The backend is a Flask API, merging PDFs with the <code>pypdf</code> library and served in production by Gunicorn, deployed separately on <a href="https://render.com/" rel="noopener">Render</a>. They only ever talk to each other over the network &mdash; the frontend never imports or calls the backend&rsquo;s code directly, which is the actual point of the assignment: practicing a real client/server split instead of one monolithic app.</p>
 
-      <p>A big innovation I made was to use pogo pins to help provide power. These are spring loaded connectors that provide consistent pressure and good contact quality, while allowing room for vertical error. In comparison to wires, they were much better at dealing with turbulence as well as eliminating the risk of generating a spark. This proved vital in creating a design that was both compact and reliable.</p>
+      <h3>How a Combine Request Works</h3>
 
-      <figure>
-        <img src="/assets/project2/Pogo.png" alt="Pogo pin connector design" width="750" loading="lazy">
-        <figcaption>Pogo Pin design</figcaption>
-      </figure>
+      <p>Selected files are collected into a JavaScript array in the order the user arranges them, packed into a <code>FormData</code> object (each file appended under the same field name, <code>files</code>), and sent with <code>fetch()</code> as a <code>multipart/form-data</code> POST to <code>/api/combine</code>. On the backend, Flask reads that file list in the same order, validates every file (extension, magic bytes, that <code>pypdf</code> can actually parse it, size limits) before merging any of them, then walks through each validated PDF in order appending its pages to a single output with <code>pypdf.PdfWriter</code>. The response&rsquo;s body is the merged PDF itself, not JSON, so the frontend reads it as a <code>Blob</code> and turns that into a download link with <code>URL.createObjectURL()</code>.</p>
 
-      <p>Overall, the LEET was one of the most complex systems I have ever worked on. It helped me to gain an appreciation of what it means to understand every little detail when designing. I developed a much better understanding of manufacturing techniques, the importance of constant design iteration and how to utilize rapid prototyping to produce a good product. This project not only improved my technical skills but also taught me how to think more critically, adapt to challenges, and refine ideas through repeated testing and feedback.</p>
+      <h3>CORS, and a Bug It Actually Caught</h3>
 
-      <figure>
-        <img src="/assets/project2/LEET.png" alt="Overall LEET system assembly" width="750" loading="lazy">
-        <figcaption>Overall LEET Assembly</figcaption>
-      </figure>
+      <p>Since this frontend and the Render backend live on different origins, the backend has to explicitly allow this site&rsquo;s origin via CORS &mdash; restricted to a specific origin list rather than a wildcard, so the API can&rsquo;t be silently called from just anywhere. Setting that up caught a real, easy-to-miss bug: the allowed-origin environment variable on Render was originally entered with a trailing slash (<code>https://peng-jerry.github.io/</code>), which never matches the <code>Origin</code> header a browser actually sends (no trailing slash) &mdash; every request would have failed CORS silently, looking exactly like the backend was down. Fixed by removing the slash and re-verifying with a real cross-origin request before calling it done.</p>
+
+      <h3>Validation, Twice</h3>
+
+      <p>The frontend does a quick sanity check (file extension) purely for immediate feedback &mdash; so a user isn&rsquo;t left guessing why a request failed 10 seconds later. The backend never trusts that check: it independently verifies every file&rsquo;s magic bytes and actually parses it with <code>pypdf</code>, rejects anything corrupted, password-protected, or oversized, and only merges if every single file passes. Client-side validation is a UX nicety here, not a security boundary.</p>
+
+      <h3>Source</h3>
+
+      <p>Both halves are in <a href="https://github.com/peng-jerry/PDF_combiner" rel="noopener">github.com/peng-jerry/PDF_combiner</a>, with a README on each side covering local setup, deployment, and the API contract in more depth.</p>
 
     </div>
 
