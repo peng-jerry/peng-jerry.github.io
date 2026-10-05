@@ -55,10 +55,10 @@
       <div class="project-meta">
         <p class="meta-org">15-113</p>
         <p class="meta-date">HW 5</p>
-        <p class="meta-skills">Skills: React, Vite, Python, Flask, SQLAlchemy, PostgreSQL, JWT authentication, REST API design, testing, Render, Neon &amp; GitHub Pages deployment</p>
+        <p class="meta-skills">Skills: React, Vite, Python, Flask, SQLAlchemy, PostgreSQL (incl. full-text search), JWT authentication, REST API design, drag &amp; drop, testing, Render, Neon &amp; GitHub Pages deployment</p>
       </div>
 
-      <p>A full-stack note-taking app: sign up, write notes in Markdown with a live preview, and organise them into folders inside folders. Every account&rsquo;s notes are private to it, everything saves automatically as you type, and the layout adapts from a three-pane desktop view down to a phone.</p>
+      <p>A full-stack note-taking app: sign up, write notes in Markdown with a live preview, and organise them with nested folders and coloured tags. Notes can link to each other with <code>[[wiki links]]</code>, start from templates, keep a version history, and go to a trash you can restore from. Everything saves automatically as you type (even through a dropped connection), the panes can be resized or collapsed, and the layout adapts from a three-pane desktop view down to a phone.</p>
 
       <div class="game-embed">
         <a class="btn btn-primary" href="/projects/noteable/">
@@ -70,7 +70,7 @@
 
       <h3>Three Deployed Pieces</h3>
 
-      <p>The frontend is a React single-page app built with Vite, and the built copy is served straight from this site at <code>/noteable/</code>. It talks to a Flask REST API hosted on <a href="https://render.com/" rel="noopener">Render</a>, which stores everything in a PostgreSQL database on <a href="https://neon.tech/" rel="noopener">Neon</a>. Database migrations (Alembic) run automatically on every deploy. The app uses hash URLs (<code>/noteable/#/notes/&hellip;</code>) on purpose: GitHub Pages only knows this site&rsquo;s own 404 page, so ordinary deep links would break as soon as someone refreshed.</p>
+      <p>The frontend is a React single-page app built with Vite, and the built copy is served straight from this site at <code>/projects/noteable/</code>. It talks to a Flask REST API hosted on <a href="https://render.com/" rel="noopener">Render</a>, which stores everything in a PostgreSQL database on <a href="https://neon.tech/" rel="noopener">Neon</a>. Database migrations (Alembic) run automatically on every deploy. The app uses hash URLs (<code>/projects/noteable/#/notes/&hellip;</code>) on purpose: GitHub Pages only knows this site&rsquo;s own 404 page, so ordinary deep links would break as soon as someone refreshed.</p>
 
       <h3>Accounts and Private Routes</h3>
 
@@ -78,11 +78,23 @@
 
       <h3>Folders Inside Folders</h3>
 
-      <p>Folders form a tree through a single <code>parent_id</code> column. The API rejects moves that would put a folder inside itself or one of its own subfolders, caps nesting at ten levels, and keeps sibling names unique. Deleting a folder cascades to everything inside it, and the confirmation dialog tells you exactly how many subfolders and notes will go with it before you commit.</p>
+      <p>Folders form a tree through a single <code>parent_id</code> column. The API rejects moves that would put a folder inside itself or one of its own subfolders, caps nesting at ten levels, and keeps sibling names unique. Folders can be starred to pin them to the top of the sidebar, and notes and folders can be dragged onto other folders (with a long-press on touch screens). Deleting a note or folder moves it to a trash for 30 days rather than destroying it: everything trashed together is tagged with the folder it went with, so restoring the folder brings back exactly that set, back to where it was if possible, or to the top level (renamed if the old name has since been taken) if not.</p>
+
+      <h3>Tags, Search and Sorting</h3>
+
+      <p>Tags are created on the fly as you type them into a note, with autocomplete, and get a colour that works in both light and dark themes; the sidebar lists them with counts, and selecting several shows only notes that have all of them. Search matches partial words in titles and content, ranks results with PostgreSQL&rsquo;s full-text search (title matches count for more), highlights the matched words in the results, and understands <code>tag:exam</code> filters and <code>&quot;quoted phrases&quot;</code>. There are eight sort orders, the choice is remembered separately for each folder or view, and inside a folder you can switch to a manual order and drag notes into place.</p>
+
+      <h3>Linked Notes and Version History</h3>
+
+      <p>Typing <code>[[</code> in the editor suggests note titles; the preview turns links into working links, and a link to a note that doesn&rsquo;t exist yet creates it when clicked. The server records each link&rsquo;s target, so renaming a note rewrites the <code>[[link text]]</code> in every note that points to it, and a details panel shows which notes link to the current one, alongside a clickable outline of its headings and word count and reading time. Autosave also keeps a snapshot of a note at most every ten minutes while you edit (plus named snapshots on request, up to 50 per note). The history view shows a line-by-line diff against the current text, and restoring a version saves the current text as a version first, so nothing is ever lost by restoring.</p>
+
+      <h3>Templates, Import and Export</h3>
+
+      <p>New notes can start from five built-in templates or your own &mdash; any note can be saved as one &mdash; with placeholders like <code>{{date}}</code>, <code>{{weekday}}</code> and <code>{{folder}}</code> filled in from your own clock and locale. Import takes Markdown or text files, or a <code>.zip</code> that&rsquo;s unpacked in the browser and recreated as folders; files are sent in batches so a large archive never exceeds the API&rsquo;s request limit. Notes export as <code>.md</code>, <code>.txt</code> or a print-ready PDF, and a folder (or everything) exports as a <code>.zip</code> whose files carry a small header with their title and tags &mdash; so an export imports back in with its structure and tags intact, doubling as a backup.</p>
 
       <h3>Autosave Without Lost Edits</h3>
 
-      <p>There&rsquo;s no save button. Edits are sent about a second after you stop typing, and only the fields that changed are sent. Saves never overlap: anything typed while one is in flight is merged and sent next, so they can&rsquo;t arrive out of order and overwrite newer text with older text. A failed save keeps your changes and offers a retry, switching notes saves whatever is pending first, and the browser warns you before closing a tab with unsaved work.</p>
+      <p>There&rsquo;s no save button. Edits are sent about a second after you stop typing, and only the fields that changed are sent. Saves never overlap: anything typed while one is in flight is merged and sent next, so they can&rsquo;t arrive out of order and overwrite newer text with older text. Until the server confirms a save, the unsent changes are also kept in the browser: if the connection drops, the editor says so, retries with back-off and sends them the moment it&rsquo;s back online; if the tab is closed first, reopening the note offers to restore them. Switching notes saves whatever is pending, and the browser warns you before closing a tab with unsaved work.</p>
 
       <h3>Built to Grow</h3>
 
@@ -90,7 +102,7 @@
 
       <h3>Testing, and the Bugs It Caught</h3>
 
-      <p>The backend has 39 pytest tests, run against both SQLite and a real PostgreSQL server, and the frontend has 32 Vitest tests. On top of that, a scripted headless-browser run clicks through the whole app against the real API at desktop, tablet and phone sizes. That run caught bugs the unit tests couldn&rsquo;t: deleting the folder you were viewing left the app stuck on a folder that no longer existed, and the search box trimmed spaces while you were still typing. Deployment caught two more. Render had been running its default start command instead of the project&rsquo;s, and the service URL turned out not to be the one the frontend expected &mdash; the default name was already taken by someone else&rsquo;s service. Checking that the health endpoint reported <em>this</em> API (and a working database) before building is what caught it.</p>
+      <p>The backend has 67 pytest tests, run against both SQLite and a real PostgreSQL server, and the frontend has 51 Vitest tests. On top of that, scripted headless-browser runs click through every feature against the real API at desktop, tablet and phone sizes &mdash; dragging notes and folders, importing a zip, going offline mid-edit, closing the tab and recovering the draft. Those runs caught bugs the unit tests couldn&rsquo;t: deleting the folder you were viewing left the app stuck on a folder that no longer existed, a dialog could wipe text typed the instant it opened, and drag-and-drop announced internal IDs to screen readers instead of note names. Testing the database migration against a Postgres copy with existing rows caught one that would have broken the live deploy outright: a new column&rsquo;s default value was written in a form SQLite accepts but PostgreSQL rejects. The first deployment caught two more. Render had been running its default start command instead of the project&rsquo;s, and the service URL turned out not to be the one the frontend expected &mdash; the default name was already taken by someone else&rsquo;s service. Checking that the health endpoint reported <em>this</em> API (and a working database) before building is what caught it.</p>
 
       <h3>Source</h3>
 
