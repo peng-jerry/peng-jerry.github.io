@@ -29,7 +29,7 @@ projects/
   crossyroad/             Crossy Road game (15-113 HW 2)
   trivia-game/            Trivia Game Show source (15-113 HW 3; Python, not served as a page)
   pdf-combiner/           PDF Combiner frontend (15-113 HW 4; backend on Render)
-  noteable/               Noteable build output (15-113 HW 5; source in peng-jerry/Noteable)
+  noteable/               Noteable build output (15-113 Project 2; source in peng-jerry/Noteable)
   assets/                 Project images and project-card thumbnails
 css/style.css           All styling, including both colour themes
 js/site.js              Theme toggle + mobile nav
